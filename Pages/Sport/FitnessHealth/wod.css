@@ -1,0 +1,52 @@
+/*
+body {
+  background-color: rgb(255, 255, 255);
+  height: 1rem;
+}
+
+main {
+  background-color: rgb(255, 255, 255);
+  height: 40rem;
+}
+
+.title-wod {
+  font-size: 4rem;
+  padding-top: 3rem;
+  color: rgb(4, 4, 4);
+  text-align: center;
+  background-color: white;
+  height: 11rem;
+  font-family: Ubuntu;
+  font-weight: 550;
+  border-bottom: 1px solid rgb(197, 192, 192);
+}
+
+.today-date {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 21rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: 1.5px solid whitesmoke;
+  border-radius: 5px;
+  width: 42rem;
+  height: 10rem;
+  text-align: center;
+  background-image: linear-gradient(to top left, whitesmoke, white);
+  cursor: pointer;
+}
+
+.today-date:hover {
+  background-image: linear-gradient(to top right, whitesmoke, white);
+  color: black;
+}
+
+*/
+
+.overlay {
+  opacity: 0.2;
+}
+
+.overlay:hover {
+  opacity: initial;
+}

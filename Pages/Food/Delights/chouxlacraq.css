@@ -1,0 +1,28 @@
+.title-choux-page {
+  font-size: 5rem;
+  padding-top: 2rem;
+  color: rgb(107, 84, 55);
+  text-align: center;
+  background-color: whitesmoke;
+  height: 11rem;
+  font-family: Brush Script MT;
+  font-weight: 550;
+}
+.text1-choux-page {
+  padding: 2rem;
+  margin-left: -3rem;
+  margin-right: 6rem;
+  color: rgb(107, 84, 55);
+  font-family: Ubuntu;
+}
+.container-choux-page {
+  width: 100%;
+  margin-left: 7rem;
+  display: grid;
+  padding: 2rem;
+}
+
+.img-choux-page {
+  height: 53rem;
+  padding: 2rem;
+}

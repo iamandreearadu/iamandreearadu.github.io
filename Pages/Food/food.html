@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/Pages/Food/food.css" />
+    <title>Food Page</title>
+  </head>
+  <div class="bar">
+    <a href="/Pages/Login/login.html" rel="noopener noreferrer""><div class="login"><button class="login-btn">LOG IN</button></div></a>
+  </div>
+  <body>
+    <!-- BAR MENU -->
+    <header id="masthead" class="site-header" role="banner">
+      <div class="header-main">
+        ANDREEA RADU
+        <div class="sub-header-main">OFFICIAL PERSONAL BLOG</div>
+      </div>
+      <nav>
+        <a
+          class="btn-home btn-menu"
+          href="/Pages/Home/home.html"
+          rel="noopener noreferrer"
+          >HOME</a
+        >
+        <a
+          class="btn-food btn-menu"
+          href="/Pages/Food/food.html"
+          rel="noopener noreferrer"
+          >DELIGHTS</a
+        >
+        <div class="dropdown">
+          <a class="btn-menu" href="/Pages/Sport/sport.html">FITNESS & HEALTH</a>
+          <div class="dropdown-content">
+            <a  class="dropdown-btn"
+                href="/Pages/Sport/FitnessHealth/wod.html"
+                rel="noopener noreferrer">
+              WOD
+            </a>
+            <a  class="dropdown-btn"
+                href="/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+                rel="noopener noreferrer">
+              CHOOSE YOUR PROGRAM
+            </a>
+           <a  class="dropdown-btn"
+               href="/Pages/Sport/FitnessHealth/challenges.html"
+               rel="noopener noreferrer">
+              CHALLENGES
+          </a>
+          <a  class="dropdown-btn"
+              href="/Pages/Sport/FitnessHealth/health.html"
+              rel="noopener noreferrer">
+              HEALTH     
+         </a>
+          </div>
+        </div>
+        <a
+          class="btn-contact btn-menu"
+          href="/Pages/Contact/contact.html"
+          rel="noopener noreferrer"
+          >CONTACT</a
+        >
+      </nav>
+      <div class="title-delights">DELIGHTS NEST</div>
+    </header>
+
+    <!--WEB PAGE-->
+    <main>
+      <!--DESCRIPTION-->
+      <div>
+        <img
+          src="/Resources/DelightsNest/choux_la_craquelin_banner.jpg"
+          class="del-banner"
+        />
+        <div class="title-description">About us</div>
+        <div class="description">
+          Delights Nest, the heaven of flavours and colors, is a family owned
+          and operated business in Sibiu, Romania. We carefully select our
+          ingredients for their freshness, flavour and natural value. Whether
+          you are searching for, Delights Nest is sure to have something freshly
+          baked to suits your mood or your desires. We offer a wide variety of
+          delights, vegan or nonvegan, sweet or salty.
+        </div>
+
+        <div class="insta-del">
+          <a
+            href="https://www.instagram.com/delightsnest.sibiu/?hl=ro"
+            target="_newBlank"
+            ><img
+              src="/Resources/instagram.webp"
+              alt="insta"
+              class="btn-social"
+            />
+            <h1 class="text-social-del">delightsnest.sibiu</h1></a
+          >
+        </div>
+      </div>
+
+      <!--COLUMNS-->
+      <div class="del-container">
+        <!-- FIRTS COLUMN-->
+         <div class="del1 columndel" alt="del1"> 
+          <!--1 PHOTO-->
+          <div>
+            <a
+              href="/Pages/Food/Delights/chouxlacraq.html"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/Resources/DelightsNest/choux_la_craquelin.jpg"
+                class="img-choux img-delights"
+            /></a>
+            <h1 class="text-choux text-images">Choux Au Craquelin</h1>
+          </div>
+          <!--2 PHOTO-->
+          <div>
+            <img
+              src="/Resources/DelightsNest/lavander_cheesecake.jpg"
+              class="img-lavandercheesecake img-delights"
+            />
+            <h1 class="text-lavandercheesecake text-images">
+              Raw Vegan Lavender Cheesecake
+            </h1>
+          </div>
+          <!--3 PHOTO-->
+          <div>
+            <img
+              src="/Resources/DelightsNest/snickers_slice.jpg"
+              class="img-snickersslice img-delights"
+            />
+            <h1 class="text-snickersslice text-images">Snickers Slice</h1>
+          </div>
+      </div>
+        <!-- SECOND COLUMN-->
+        <!--1 PHOTO-->
+         <div class="del2 columndel"> 
+          <div>
+            <img
+              src="/Resources/DelightsNest/raspberry_brownie.jpg"
+              class="img-raspberrycoffee img-delights"
+            />
+            <h1 class="text-raspberrybrownie text-images">Raspberry Brownie</h1>
+          </div>
+          <!-- 2 PHOTO-->
+          <div>
+            <img
+              src="/Resources/DelightsNest/coffee_slice.jpg"
+              class="img-coffeeslice img-delights"
+            />
+            <h1 class="text-coffeslice text-images">Raw Vegan Coffee Slice</h1>
+          </div>
+          <!--3 PHOTO-->
+          <div>
+            <img
+              src="/Resources/DelightsNest/biscuits.jpg"
+              class="img-biscuits img-delights"
+            />
+            <h1 class="text-biscuit text-images">
+              Marshmallow with Wallnuts Biscuit
+            </h1>
+          </div>
+         </div> 
+
+        <!-- 3 COLUMN-->
+        
+        <div id='items' class='items'></div>
+	
+	      <div><a href="javascript:void(0)" class="btn" onclick="loadData()">Load more</a></div>
+
+        <template id='template'>
+          <div class="item-image">
+            <div class="del3 columndel">
+              <!--1 PHOTO-->
+              <div>
+                <img
+                  src="/Resources/DelightsNest/caramel_slice.jpg"
+                  class="img-caramelslice img-delights"
+                />
+                <h1 class="text-caramelslice text-images">
+                  Raw Vegan Caramel Slice
+                </h1>
+              </div>
+              <!--2 PHOTO-->
+              <div>
+                <img
+                  src="/Resources/DelightsNest/raspberry_cacao_slice.jpg"
+                  class="img-raspberrycacaoslice img-delights"
+                />
+                <h1 class="text-raspberrycacaoslice text-images">
+                  Raw Vegan Raspberry and Cacao Slice
+                </h1>
+              </div>
+              <!--3 PHOTO-->
+              <div>
+                <img
+                  src="/Resources/DelightsNest/mango_cheesecake.jpg"
+                  class="img-mangocheesecake img-delights"
+                />
+                <h1 class="text-mangocheesecake text-images">
+                  Raw Vegan Mango Cheesecake
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="item-title">{{title}}</div>
+        </template>
+
+      </div>
+    </main>
+
+    <!-- FOOTER-->
+    <footer>
+      <div class="msg-social">You can find me here</div>
+      <div class="social">
+        <a
+          href="https://www.instagram.com/raduandreeaa/?hl=ro"
+          target="_newBlank"
+          ><img
+            src="/Resources/instagram.webp"
+            alt="insta"
+            class="btn-social"
+          />
+          <h1 class="text-social">raduandreeaa</h1></a
+        >
+        <a href="https://www.facebook.com/r.deeea" target="_newBlank"
+          ><img src="/Resources/facebook.png" alt="fb" class="btn-social" />
+          <h1 class="text-social">Radu Andreea</h1></a
+        >
+        <a href="https://www.gmail.com" target="_newBlank"
+          ><img src="/Resources/gmail.png" alt="gmail" class="btn-social" />
+          <h1 class="text-social">andreea1997.radu@gmail</h1></a
+        >
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="/Pages/Food/food.js"></script>
+  </body>
+</html>

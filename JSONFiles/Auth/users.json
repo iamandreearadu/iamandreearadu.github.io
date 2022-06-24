@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "email": "alexandru.boldisor@boldinet.ro",
+        "password": "password"
+    },
+    {
+        "id": 2,
+        "email": "test@test.ro",
+        "password": "test"
+    }
+]

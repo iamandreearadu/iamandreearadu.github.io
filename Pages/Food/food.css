@@ -1,0 +1,113 @@
+body {
+  height: 380vh;
+}
+
+footer {
+  margin-top: 200rem;
+}
+main {
+  width: 100%;
+}
+.title-delights {
+  font-size: 4rem;
+  padding-top: 3rem;
+  color: rgb(4, 4, 4);
+  text-align: center;
+  background-color: whitesmoke;
+  height: 11rem;
+  font-family: Ubuntu;
+  font-weight: 550;
+}
+
+.del-banner {
+  margin-top: 2rem;
+  width: 100%;
+  height: 55rem;
+}
+
+.title-description {
+  padding: 2rem;
+  font-size: 4rem;
+  color: inherit;
+  font-family: Ubuntu;
+  text-align: center;
+}
+.description {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  font-family: Ubuntu;
+}
+
+/* INSTAGRAM */
+.insta-del {
+  padding: 3rem;
+  text-align: center;
+}
+
+.text-social-del {
+  padding: 1rem;
+  display: inline;
+  color: black;
+  font-size: 2rem;
+  font-family: Ubuntu;
+}
+
+/*CONTAINER COLOANE*/
+
+.del-container {
+  width: inherit;
+  text-align: center;
+  display: flexbox;
+  border-top: 1px solid rgb(217, 213, 213);
+  box-sizing: border-box;
+}
+/*COLOANE*/
+.columndel {
+  background-color: rgb(245, 244, 244);
+  text-align: center;
+  width: 100rem;
+  height: 41rem;
+  border: 2px solid white;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 6rem;
+}
+
+/*IMAGINI COLOARE*/
+.img-delights {
+  padding: 2rem;
+  height: 33rem;
+  width: 33rem;
+}
+
+.text-images {
+  text-align: center;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+}
+
+.items .item {
+  background: rgb(245, 244, 244);
+  display: inline-block;
+  width: 100%;
+}
+
+.item-title {
+  font-size: 20pt;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding: 2rem;
+}
+
+.items .item .item-image {
+  width: 100%;
+}
+.btn {
+  font-size: 2rem;
+  margin: 3rem;
+  color: black;
+  text-decoration: none;
+}

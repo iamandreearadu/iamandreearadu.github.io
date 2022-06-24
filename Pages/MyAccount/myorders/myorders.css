@@ -1,0 +1,12 @@
+.view-order:hover {
+  opacity: 50%;
+}
+
+.delivered {
+  background-color: rgb(67, 163, 52);
+  color: whitesmoke;
+  padding-left: 1.5rem;
+  border-radius: 4px;
+  font-weight: 650;
+  height: 2rem;
+}

@@ -1,32 +1,7 @@
 var arrayWod = [];
 const delightTmpContainer = document.getElementById("templateWods");
 
-var today = new Date();
 
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-// var date1 =
-//   today.getDate() +
-//   " " +
-//   monthNames[today.getMonth()] +
-//   " " +
-//   today.getFullYear();
-// document.getElementById("today-date").innerHTML = "";
-
-// document.getElementById("today-date").innerHTML = date1;
 
 const createArrayWod = function () {
   let w1 = {
@@ -95,3 +70,22 @@ const loadWods = function () {
 
 createArrayWod();
 loadWods();
+
+/*
+    TO DO LIST FOR ANDREEA RADU ⓜⓜⓜⓜ 
+
+    1. Creeaza un fisier in JSONFiles/wod cu numele wod.json in care sa scrii obiectele wod 
+      - adauga mai mutlte proprietati detaliu | timp program | nivelul de dificultate etc
+    2. Creeaza o metoda prin care sa iei datele din fisier json si sa le pui intr-un array ex: 'wodList'
+    3. Daca utilizatorul este logat afiseaza un buton 'Adauga'
+    4. In momentul in care apasa pe butonul 'Adauga' sa i se adauge obiectul intr-un array ex:  myUserWod
+    5. Pe pagina de MyAccount sa fie o sectiuni unde afisezi obiectele astea din lista
+    6. Creeaza apoi un buton pt fiecare rand prin care utilizatorul poate sa dea remove din lista
+
+    SCOP =>     Sa simulam un caz pe cat real putem
+                Sa te obisnuiesti cu ideea de obiecte si proprietati
+                
+
+    Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
+*/
+

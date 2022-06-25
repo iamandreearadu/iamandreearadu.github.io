@@ -1,4 +1,4 @@
-//https://images.pexels.com/photos/12447940/pexels-photo-12447940.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1
+
 
 /*
     GLOBAL VARIABLES
@@ -132,3 +132,22 @@ loadDelights(arrayDelights.slice(0, itemPerPage.value));
 loadMore.addEventListener("click", function (e) {
   loadDelights(arrayDelights);
 });
+
+
+/*
+    TO DO LIST FOR ANDREEA RADU ⓜⓜⓜⓜ 
+
+    1. Refactorizare delights. 
+      a. Creeaza in JSONFiles/Delights un fisier delights.json in care sa ai toate obiectele delights. 
+      b. Creeaza o metoda getDelightsFromJson() care sa citeasca din json si sa le puna in arrayul =>  'arrayDelights' 
+        (declarat mai sus si care e folosit acum)
+  
+    2. Adauga pt obiectul delights mai multe informatii -> de exemplu:  Pret | descriere scurta | rating | gramaj 
+    3. Asa cum ai creeat dropdown cu 'Choose how many to display' mai adauga inca alte filtre
+      de exemplu: sa sortezi dupa pret | dupa categorii (Raw Vegan, Non Vegan etc) | si dupa gramaj
+
+    SCOP =>   Sa simulam un caz pe cat real putem
+              Sa te obisnuiesti cu ideea de obiecte si proprietati
+
+    Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
+*/

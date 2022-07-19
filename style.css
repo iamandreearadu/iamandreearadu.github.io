@@ -1,8 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto,sans-serif";
+}
 
+.bg-image {
+  background-image: url("/Resources/backgroundimage.jpg");
+  background-position: 100%;
+  background-size: cover;
+  height: 100vh;
+}
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: #212529;
+.bg-image::after {
+  content: "Enjoy your journey";
+  white-space: pre;
+  font-style: italic;
+  display: flow-root;
+  margin-top: 25rem;
+  position: relative;
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.nav-link,
+.navbar {
+  text-decoration: none;
   color: white;
+  font-size: 16px;
+  font-family: "Arial Black";
+}
+
+.nav-link,
+.navbar-item,
+.navbar:hover {
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+}
+
+.dropdown-menu,
+.dropdown-item {
+  background: none;
+  color: whitesmoke;
+  font-family: "Arial Black";
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown-item:hover {
+  background: none;
+  opacity: 50%;
+  color: rgb(172, 172, 172);
 }
 
 .cookie-message {
@@ -18,4 +67,33 @@
 
 .sidebar:hover {
   opacity: 40%;
+}
+
+.btn-scrolldown {
+  background-color: rgb(250, 154, 215);
+  cursor: pointer;
+  border: 1px solid rgb(250, 154, 215);
+  border-radius: 2px;
+  color: black;
+  font-style: italic;
+}
+
+.btn-scrolldown--2 {
+  background-color: #c3c2c2;
+  border: 1px solid #c3c2c2;
+}
+
+.btn-scrolldown--3 {
+  background-color: #fac696;
+  border: 1px solid #fac696;
+}
+
+.btn-scrolldown--4 {
+  background-color: #afbefd;
+  border: 1px solid #afbefd;
+}
+
+.btn-scrolldown:hover {
+  color: black;
+  opacity: 60%;
 }

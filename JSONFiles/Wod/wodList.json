@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "photoUrl": "/Resources/Sport/wod3.jpg",
+    "date": "2022,06,22",
+    "title": "22"
+  },
+  {
+    "id": 2,
+    "photoUrl": "/Resources/Sport/wod2.png",
+    "date": "2022,06,21",
+    "title": "SUPER LEGS"
+  },
+  {
+    "id": 3,
+    "photoUrl": "/Resources/Sport/wod1.jpg",
+    "date": "2022,06,20",
+    "title": "FCK FL"
+  }
+]

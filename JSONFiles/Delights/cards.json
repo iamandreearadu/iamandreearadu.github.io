@@ -1,0 +1,121 @@
+[
+  {
+    "id": 13,
+    "photoUrl": "/Resources/DelightsNest/raspberryjam_slice.jpg",
+    "title": "Raspberry Jam Slice",
+    "typeImg": "/Resources/DelightsNest/100vegan.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "9,00 LEI / BUC"
+  },
+  {
+    "id": 12,
+    "photoUrl": "/Resources/DelightsNest/covrigei.jpg",
+    "title": "Salty and Cheesy 'Covrigei'",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "95,00 LEI / 1000g"
+  },
+  {
+    "id": 11,
+    "photoUrl": "/Resources/DelightsNest/peanutbar.jpg",
+    "title": "Peanut and Quinoa Bar",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "9,00 LEI / BUC"
+  },
+
+  {
+    "id": 10,
+    "photoUrl": "/Resources/DelightsNest/raspberrylemon_cake2.jpeg",
+    "title": "Raspberry and Lemon Cake",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "124,00 LEI / 1000g"
+  },
+  {
+    "id": 9,
+    "photoUrl": "/Resources/DelightsNest/choux_la_craquelin.jpg",
+    "title": "Choux la Craquelin",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "6,99 LEI / BUC"
+  },
+
+  {
+    "id": 8,
+    "photoUrl": "/Resources/DelightsNest/lavander_cheesecake.jpg",
+    "title": "Lavander Cheesecake",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "124,00 LEI / 1000g"
+  },
+  {
+    "id": 7,
+    "photoUrl": "/Resources/DelightsNest/snickers_slice.jpg",
+    "title": "Snickers Slice",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "99,00 LEI / 1000g"
+  },
+  {
+    "id": 6,
+    "photoUrl": "/Resources/DelightsNest/raspberry_brownie.jpg",
+    "title": "Raspberry Brownie",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "90,00 LEI / 1000g"
+  },
+  {
+    "id": 5,
+    "photoUrl": "/Resources/DelightsNest/coffee_slice.jpg",
+    "title": "Raw Vegan Coffee Slice",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "22,00 LEI / 100g"
+  },
+  {
+    "id": 4,
+    "photoUrl": "/Resources/DelightsNest/biscuits.jpg",
+    "title": "Marshmallow & Walnuts Delights",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "20,00 LEI / 200g"
+  },
+  {
+    "id": 3,
+    "photoUrl": "/Resources/DelightsNest/caramel_slice.jpg",
+    "title": "Raw Vegan Caramel Slice",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "12,00 LEI / BUC"
+  },
+  {
+    "id": 2,
+    "photoUrl": "/Resources/DelightsNest/raspberry_cacao_slice.jpg",
+    "title": "Raw Vegan Raspberry & Cacao Slice",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "22,00 LEI / 100g"
+  },
+  {
+    "id": 1,
+    "photoUrl": "/Resources/DelightsNest/mango_cheesecake.jpg",
+    "title": "Raw Vegan Mango Cheesecake",
+    "typeImg": "/Resources/DelightsNest/100raw.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "114,00 LEI / 1000g"
+  }
+]

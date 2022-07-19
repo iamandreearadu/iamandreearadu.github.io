@@ -1,0 +1,30 @@
+.showprice-btn {
+  margin-top: 1.8rem;
+  border: 1px solid rgb(183, 183, 183);
+  border-radius: 2px;
+  text-align: center;
+  color: rgb(42, 42, 42);
+  height: 2rem;
+}
+
+.btn-primary {
+  cursor: pointer;
+}
+
+.bg-image-delights {
+  background-image: url("/Resources/background-food.jpg");
+  background-position: 100%;
+  background-size: cover;
+  height: 90vh;
+}
+.bg-image-delights::after {
+  content: "Delights Nest, the heaven of flavours and colors";
+  font-style: italic;
+  display: flow-root;
+  margin-top: 20rem;
+  position: relative;
+  margin-left: 6rem;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 40px;
+}

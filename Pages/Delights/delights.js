@@ -1,117 +1,124 @@
-
-
 /*
     GLOBAL VARIABLES
 */
 
 var arrayDelights = [];
+var userDelights = [];
 const delightTmpContainer = document.getElementById("templateDelights");
 const itemPerPage = document.getElementById("inputGroupSelect02");
+const itemSortByPrice = document.getElementById("inputGroupSelect03");
 const loadMore = document.getElementById("loadmore");
 
-console.log(itemPerPage.value);
+/* GLOBAL VARIABLES */
+//console.log(itemPerPage.value);
 
+function checkUserDelights() {
+  const savedDelights = localStorage.getItem("Delights");
+  if (
+    savedDelights !== null ||
+    savedDelights !== undefined ||
+    savedDelights !== ""
+  ) {
+  }
+}
+
+/* SAVE/ UNSAVE DELIGHTS FUNCTION */
+function updateDelight(idDelight, actionType) {
+  let savedDelights = localStorage.getItem("Delights");
+
+  switch (actionType) {
+    case "Remove":
+      if (savedDelights.includes("-")) {
+        let splitedSavedDelights = [...savedDelights.split("-").map(Number)];
+        const indexToRemove = splitedSavedDelights.indexOf(idDelight);
+        splitedSavedDelights.splice(indexToRemove, 1);
+
+        if (splitedSavedDelights.length === 1) {
+          window.localStorage.setItem("Delights", splitedSavedDelights[0]);
+        } else {
+          let newDelights = splitedSavedDelights[0];
+
+          for (let i = 1; i < splitedSavedDelights.length; i++) {
+            newDelights += "-" + splitedSavedDelights[i];
+          }
+          window.localStorage.setItem("Delights", newDelights);
+        }
+      } else {
+        window.localStorage.removeItem("Delights");
+      }
+
+      break;
+    case "Save":
+      if (
+        savedDelights !== null &&
+        savedDelights !== undefined &&
+        savedDelights !== ""
+      ) {
+        window.localStorage.setItem(
+          "Delights",
+          savedDelights + "-" + idDelight
+        );
+      } else {
+        window.localStorage.setItem("Delights", idDelight);
+      }
+      break;
+    default:
+      break;
+    // code block
+  }
+
+  loadDelights(arrayDelights.slice(0, itemPerPage.value));
+}
+/* SAVE/ UNSAVE DELIGHTS FUNCTION */
+
+/* CHOOSE HOW MANY TO DISPLAY FUNCTION */
 itemPerPage.addEventListener("change", function (e) {
   // itemPerPage.value
   // arrayDelights
   loadDelights(arrayDelights.slice(0, itemPerPage.value));
 });
+/* CHOOSE HOW MANY TO DISPLAY FUNCTION  */
 
-/*
-    METHODDS
-*/
-
-const createArrayDelights = function () {
-  let d1 = {
-    id: 1,
-    photoUrl: "/Resources/DelightsNest/choux_la_craquelin.jpg",
-    title: "Choux la Craquelin",
-    description: "Non Vegan",
-  };
-
-  let d2 = {
-    id: 2,
-    photoUrl: "/Resources/DelightsNest/lavander_cheesecake.jpg",
-    title: "Lavander Cheesecake",
-    description: "Raw Vegan",
-  };
-  let d3 = {
-    id: 3,
-    photoUrl: "/Resources/DelightsNest/snickers_slice.jpg",
-    title: "Snickers Slice",
-    description: "Non Vegan",
-  };
-  let d4 = {
-    id: 4,
-    photoUrl: "/Resources/DelightsNest/raspberry_brownie.jpg",
-    title: "Raspberry Brownie",
-    description: "Non Vegan",
-  };
-  let d5 = {
-    id: 5,
-    photoUrl: "/Resources/DelightsNest/coffee_slice.jpg",
-    title: "Raw Vegan Coffee Slice",
-    description: "Raw Vegan",
-  };
-  let d6 = {
-    id: 6,
-    photoUrl: "/Resources/DelightsNest/biscuits.jpg",
-    title: "Marshmallow & Walnuts Delights",
-    description: "Non Vegan",
-  };
-  let d7 = {
-    id: 7,
-    photoUrl: "/Resources/DelightsNest/caramel_slice.jpg",
-    title: "Raw Vegan Caramel Slice",
-    description: "Raw Vegan",
-  };
-  let d8 = {
-    id: 8,
-    photoUrl: "/Resources/DelightsNest/raspberry_cacao_slice.jpg",
-    title: "Raw Vegan Raspberry & Cacao Slice",
-    description: "Raw Vegan",
-  };
-  let d9 = {
-    id: 9,
-    photoUrl: "/Resources/DelightsNest/mango_cheesecake.jpg",
-    title: "Raw Vegan Mango Cheesecake",
-    description: "Raw Vegan",
-  };
-  let d10 = {
-    id: 10,
-    photoUrl: "/Resources/DelightsNest/raspberrylemon_cake2.jpeg",
-    title: "Raspberry and Lemon Cake",
-    description: "Non Vegan",
-  };
-
-  arrayDelights.push(d10);
-  arrayDelights.push(d1);
-  arrayDelights.push(d2);
-  arrayDelights.push(d3);
-  arrayDelights.push(d4);
-  arrayDelights.push(d5);
-  arrayDelights.push(d6);
-  arrayDelights.push(d7);
-  arrayDelights.push(d8);
-  arrayDelights.push(d9);
-};
-
+/* LOAD DELIGHTS FUNCTION  */
 const loadDelights = function (array) {
   delightTmpContainer.innerHTML = "";
+
+  let delightStorage = localStorage.getItem("Delights");
+  let savedDelights = [];
+
+  if (
+    delightStorage !== null &&
+    delightStorage !== undefined &&
+    delightStorage !== ""
+  ) {
+    savedDelights = [
+      ...localStorage.getItem("Delights").split("-").map(Number),
+    ];
+  }
+  let btnSaveDel = "";
 
   array.forEach((delight, idx) => {
     const card = document.createElement("div");
     card.classList = "card-body";
 
+    if (savedDelights.includes(delight.id)) {
+      btnSaveDel = "Remove";
+    } else {
+      btnSaveDel = "Save";
+    }
+
     // Construct card content
     const content = `
       <div class="col-md-4 col-sm-12 p-3 ">
-        <div class="card" style="width: 100%; box-shadow: 5px 10px #e4e4e4;">
+        <div class="card" style="width: 100%; box-shadow: 5px 5px #e4e4e4;">
             <img class="card-img-top" src="${delight.photoUrl}" alt="${delight.title}" />
             <div class="card-body">
-                <h5 class="card-title">${delight.title}</h5>
-                <p class="card-text">${delight.description}</p>
-                <a href="#" class="btn btn-primary" style="background-color:#343a40; border:1px solid white">Get Recipe</a>
+                <h5 class="card-title">${delight.title} <img style="float:right;height:${delight.typeImgHeight};width:${delight.typeImgWidth}" src="${delight.typeImg}" /> </h5>
+             
+                <h5 class="showprice-btn">${delight.price}</h5>
+                <a  onclick="updateDelight(${delight.id}, '${btnSaveDel}')" class="btn btn-light btn-del">${btnSaveDel}</a>
+                <a class="btn btn-light btn-del ml-4">Add to cart</a>
+                <a class="btn btn-light btn-del" style="float:right">Review</a>
           </div>
         </div>
       </div>
@@ -121,18 +128,26 @@ const loadDelights = function (array) {
     delightTmpContainer.innerHTML += content;
   });
 };
+/* LOAD DELIGHTS FUNCTION */
 
-/*
-    Container
-*/
+/* JSON FUNCTION */
+function createArrayDelights() {
+  $.getJSON("/JSONFiles/Delights/cards.json", (cards) => {
+    cards.forEach((card, i) => {
+      arrayDelights.push(card);
+    });
+  });
+}
+/* JSON FUNCTION */
 
 createArrayDelights();
 loadDelights(arrayDelights.slice(0, itemPerPage.value));
 
+/* LOAD MORE FUNCTION */
 loadMore.addEventListener("click", function (e) {
   loadDelights(arrayDelights);
 });
-
+/* LOAD MORE FUNCTION */
 
 /*
     TO DO LIST FOR ANDREEA RADU ⓜⓜⓜⓜ 

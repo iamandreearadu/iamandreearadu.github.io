@@ -1,0 +1,38 @@
+[
+  {
+    "id": "section--1",
+    "sectionName": "FIRE | PROGRAM",
+    "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "pictureBackround": "/Resources/Sport/fires.jpg"
+  },
+
+  {
+    "id": "section--2",
+    "sectionName": "STORM | PROGRAM",
+    "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "pictureBackround": "/Resources/Sport/storm.jpg"
+  },
+
+  {
+    "id": "section--3",
+    "sectionName": "THUNDER | PROGRAM",
+    "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px"
+  },
+  {
+    "id": "section--3",
+    "sectionName": "WHIRLDWIND | PROGRAM",
+    "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px"
+  }
+]

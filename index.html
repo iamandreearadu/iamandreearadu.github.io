@@ -17,194 +17,246 @@
     <link href="/Font-awesome/webfonts/fa-solid-900.ttf" rel="stylesheet" />
     <link href="/Font-awesome/webfonts/fa-brands-400.ttf" rel="stylesheet" />
     <link href="/Font-awesome/webfonts/fa-brands-400.woff2" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
     <!-- END FONT AWESOME STYLES -->
 
     <!-- START BOOTSTRAP STYLES -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- END BOOTSTRAP STYLES-->
-    
+
     <!-- START OWN STYLES -->
     <link rel="stylesheet" href="/style.css" />
+
     <!-- END OWN STYLES-->
   </head>
 
   <body>
-    <div class="page-header mt-3" style="text-align: center; font-family: Ubuntu">
-      <h1>ANDREEA RADU</h1>
-      <h1 style="font-size: 10px">OFFICIAL PERSONAL BLOG</h1>
+    <div class="containerm">
+      <div class="bg-image">
+        <!--ANDREEA RADU TITLE PAGE-->
+        <div
+          class="page-header pt-2"
+          style="
+            text-align: center;
+            font-family: Ubuntu;
+            opacity: 65%;
+            border-bottom: 1px solid rgba(216, 216, 216, 0.301);
+          "
+        >
+          <h1 style="color: white; margin-bottom: 0">ANDREEA RADU</h1>
+          <h1 style="font-size: 10px; color: white">OFFICIAL PERSONAL BLOG</h1>
+        </div>
+        <!--ANDREEA RADU TITLE PAGE-->
+
+        <nav class="navbar navbar-expand-lg navbar-container">
+          <a class="navbar" href="/index.html">HOME</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="navbar-item ml-3">
+                <a class="nav-link" href="/Pages/Delights/delights.html"
+                  >Delights</a
+                >
+              </li>
+              <li class="nav-item dropdown ml-3">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="/Pages/Sport/sport.html"
+                  id="navbarDropdown1"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Fitness
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a
+                    class="dropdown-item"
+                    href="/Pages/Sport/FitnessHealth/wod.html"
+                    >WOD</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+                    >Choose your program</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="/Pages/Sport/FitnessHealth/challenges.html"
+                    >Challenges</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="nav-link" href="/Pages/Health/health.html">Health</a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="nav-link" href="/Pages/Contact/contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item ml-1">
+                <a class="nav-link" href="/Pages/Practice/practice.html"
+                  >Practice</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mr-2" id="mySecNavLogin">
+                <a class="btn btn-dark" href="/Pages/Auth/Login/login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item mr-5" id="mySecNavRegister">
+                <a
+                  class="btn btn-dark"
+                  href="/Pages/Auth/Register/register.html"
+                  >Register</a
+                >
+              </li>
+              <li class="nav-item mr-2 d-none" id="mySecNavMyAccount">
+                <a class="btn btn-dark" href="/Pages/MyAccount/myaccount.html"
+                  >My account</a
+                >
+              </li>
+              <li
+                class="nav-item mr-5 d-none"
+                id="mySecNavLogout"
+                onclick="logout()"
+              >
+                <a class="btn btn-dark" href="/">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="">HOME</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false"aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ml-3">
-            <a class="nav-link" href="/Pages/Delights/delights.html">Delights</a>
-          </li>
-          <li class="nav-item dropdown ml-3">
-            <a class="nav-link dropdown-toggle" href="/Pages/Sport/sport.html" id="navbarDropdown1" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Fitness and Health
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <a class="dropdown-item" href="/Pages/Sport/FitnessHealth/wod.html">WOD</a>
-              <a class="dropdown-item" href="/Pages/Sport/FitnessHealth/chooseyourprogram.html">Choose your program</a>
-              <a class="dropdown-item" href="/Pages/Sport/FitnessHealth/challenges.html">Challenges</a>
-              <a class="dropdown-item" href="/Pages/Sport/FitnessHealth/health.html">Health</a>
-            </div>
-          </li>
-          <li class="nav-item ml-1">
-            <a class="nav-link" href="/Pages/Contact/contact.html">Contact</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mr-2" id="mySecNavLogin">
-            <a class="btn btn-outline-primary" href="/Pages/Auth/Login/login.html">Login</a>
-          </li>
-          <li class="nav-item mr-5" id="mySecNavRegister">
-            <a class="btn btn-outline-primary" href="/Pages/Auth/Register/register.html">Register</a>
-          </li>
-          <li class="nav-item mr-2 d-none" id="mySecNavMyAccount">
-            <a class="btn btn-outline-success" href="/Pages/MyAccount/myaccount.html">My account</a>
-          </li>
-          <li class="nav-item mr-5 d-none" id="mySecNavLogout" onclick="logout()">
-            <a class="btn btn-outline-success" href="/">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-   
     <main role="main">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-          </ol>
-          <div class="carousel-inner " style="display: block;margin-left: auto; margin-right: auto; width:  70%;">
-            <div class="carousel-item active" style="height: 600px;">
-              <img class="first-slide center h-100 w-100"  src="/Resources/flatlay-welcoming-summer-with-a-laptop-and-cellphone.jpg" alt="First slide">
-              <div class="container">
-                <div class="carousel-caption text-left">
-                  <h1>Welcome </h1>
-                  <p>to a world of passions, delights and joy</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item" style="height: 600px;">
-              <img class="second-slide img-slide h-100 w-100" src="/Resources/chocolate-brownie-in-tray.jpg" alt="Second slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Have a sweet day</h1>
-                  <p>Check out our recipes.</p>
-                  <p><a class="btn btn-lg btn-primary" href="/Pages/Delights/delights.html" role="button">Check out</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item" style="height: 600px;">
-              <img class="third-slide img-slide h-100 w-100" src="/Resources/wide-shot-of-compass-and-waterfalls.jpg" alt="Third slide">
-              <div class="container">
-                <div class="carousel-caption text-right">
-                  <h1>Hope you will find what you are looking for</h1>
-                  <p>And have a great journey</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+      <!-- CAROUSEL AREA
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div
+          id="mycarouselInner"
+          class="carousel-inner"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 600px;
+          "
+        ></div>
+        <a
+          class="carousel-control-prev"
+          href="#myCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#myCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      CAROUSEL AREA-->
 
-        <div class="container marketing mt-5 pt-5">
-    
-            <div class="row text-center" id="indexShortLinks">
-              <div class="col-lg-4">
-                <img class="rounded-circle" src="/Resources/DelightsNest/raspberrylemon_cake2.jpeg" alt="Generic placeholder image" width="140" height="140">
-                <h2>Delights Nest</h2>
-                <p> Heaven of flavours and colors.</p>
-                <p><a class="btn btn-secondary" href="/Pages/Delights/delights.html" role="button">Go To Page »</a></p>
-              </div>
+      <!-- INTERESTS AREA-->
+      <div class="container marketing mt-5 pt-5">
+        <div
+          id="myAreasOfInterests"
+          class="row text-center"
+          id="indexShortLinks"
+        ></div>
+        <!-- INTERESTS AREA-->
 
-              <div class="col-lg-4">
-                <img class="rounded-circle" src="/Resources/Sport/backgroundfitness.jpg" alt="Generic placeholder image" width="140" height="140">
-                <h2>Fitness & Health</h2>
-                <p>Make it a lifestyle!</p>
-                <p><a class="btn btn-secondary" href="/Pages/Sport/sport.html" role="button">Go To Page »</a></p>
-              </div>
-
-              <div class="col-lg-4">
-                <img class="rounded-circle" src="/Resources/Capture.PNG" alt="Generic placeholder image" width="140" height="140">
-                <h2>Contact</h2>
-                <p>Can't wait to see what you think.</p>
-                <p><a class="btn btn-secondary" href="/pages/Contact/contact.html" role="button">Go To Page »</a></p>
-              </div>
-            </div>
-            
-            <div class="row featurette mt-5 pt-5" id="featurette">
-              <div class="col-md-7">
-                <h2 class="featurette-heading mb-5">Delights Nest<span class="text-muted">, the heaven of flavours and colors</span></h2>
-                <p class="lead">It is a family owned
-                  and operated business in Sibiu, Romania. We carefully select our
-                  ingredients for their freshness, flavour and natural value. Whether
-                  you are searching for, Delights Nest is sure to have something freshly
-                  baked to suits your mood or your desires. We offer a wide variety of
-                  delights, vegan or nonvegan, sweet or salty.</p>
-              </div>
-              <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="/Resources/DelightsNest/choux_la_craquelin.jpg" alt="350x350" style="width: 350x; height: 350px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1816b5567c8%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1816b5567c8%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.11499786376953%22%20y%3D%22261.13599967956543%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-              </div>
-            </div>
-
-            <div class="row featurette mt-5 pt-5">
-              <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading mb-5">Fitness and Health<span class="text-muted"> Make it a lifestyle</span></h2>
-                <p class="lead"> It happend to became a vegeterian 5 years ago. My life became healthier and happier by following some simple steps day by day.</p>
-              </div>
-              <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" src="/Resources/Sport/backgroundfitness.jpg" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1816b5567d0%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1816b5567d0%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.11499786376953%22%20y%3D%22261.13599967956543%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 350px; height: 350px;">
-              </div>
-            </div>
-
-        </div>
+        <!-- DESCRIPTION AREA-->
+        <div id="descriptionArea"></div>
+        <!-- DESCRIPTION AREA-->
+      </div>
     </main>
 
     <footer class="bg-dark text-center text-white mt-5">
       <div class="container p-4 pb-0">
         <section class="mb-4">
-          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/r.deeea/"  target="_blank" role="button">
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.facebook.com/r.deeea/"
+            target="_blank"
+            role="button"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/raduAndreeaa" target="_blank" role="button">
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://twitter.com/raduAndreeaa"
+            target="_blank"
+            role="button"
+          >
             <i class="fab fa-twitter"></i>
           </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+          >
             <i class="fab fa-google"></i>
           </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/raduandreeaa/?hl=ro" target="_blank" role="button">
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.instagram.com/raduandreeaa/?hl=ro"
+            target="_blank"
+            role="button"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/andreea-radu-1449b4153/" target="_blank" role="button">
-            <i class="fab fa-linkedin-in"></i >
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.linkedin.com/in/andreea-radu-1449b4153/"
+            target="_blank"
+            role="button"
+          >
+            <i class="fab fa-linkedin-in"></i>
           </a>
         </section>
       </div>
 
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a
+        >
       </div>
     </footer>
 
@@ -213,8 +265,16 @@
     <script src="/scripts/jquery-3.1.1.min.js"></script>
     <!-- END JQUERY SCRIPTS -->
     <!-- START BOOTSTRAP SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <!-- END BOOSTSTRAP SCRIPTS-->
     <!-- START FONT-AWESOME SCRIPTS -->
     <script src="/Font-awesome/js/all.min.js"></script>
@@ -223,6 +283,7 @@
 
     <!-- START MY SCRIPTS -->
     <script src="/globalScript.js"></script>
+    <script src="/home.js"></script>
     <!-- END MY SCRIPTS -->
   </body>
 </html>

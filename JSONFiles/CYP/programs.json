@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "FIRE | PROGRAM",
+    "title": "3 MONTHS of MEALS AND WORKOUTS",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
+    "price": "650 EURO",
+    "bonus": "BONUS: 2 meetings per week to check your progress and to keep you motivated"
+  },
+  {
+    "id": 2,
+    "name": "STORM | PROGRAM",
+    "title": "1 MONTH of MEALS AND WORKOUTS",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
+    "price": "250 EURO",
+    "bonus": "BONUS: 2 meetings per week to check your progress and to keep you motivated"
+  },
+
+  {
+    "id": 3,
+    "name": "THUNDER | PROGRAM",
+    "title": "3 MONTHS of WORKOUTS",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
+    "price": "400 EURO",
+    "bonus": "BONUS: 1 meeting per week to check your progress and to keep you motivated"
+  },
+  {
+    "id": 4,
+    "name": "WHIRLDWIND | PROGRAM",
+    "title": "1 MONTH of WORKOUTS",
+    "picture": "/Resources/Sport/backgroundfitness.jpg",
+    "pictureWidth": "350px",
+    "pictureHeight": "350px",
+    "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
+    "price": "150 EURO",
+    "bonus": "BONUS: 1 meeting per week to check your progress and to keep you motivated"
+  }
+]

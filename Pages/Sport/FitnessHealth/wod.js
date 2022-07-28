@@ -1,9 +1,8 @@
 var arrayWod = [];
-const delightTmpContainer = document.getElementById("templateWods");
 
+const wodContainer = document.getElementById("templateWods");
 
-
-const createArrayWod = function () {
+/*const createArrayWod = function () {
   let w1 = {
     id: 1,
     photoUrl: "/Resources/Sport/wod3.jpg",
@@ -26,22 +25,24 @@ const createArrayWod = function () {
   arrayWod.push(w1);
   arrayWod.push(w2);
   arrayWod.push(w3);
-};
-
-const loadWods = function () {
+};*/
+const loadWods = function (arrayWod) {
+  wodContainer.innerHTML = "";
   arrayWod.sort(function (a, b) {
     return new Date(b.date) - new Date(a.date);
   });
 
   arrayWod.forEach((element, idx) => {
-    const card = document.createElement("div");
+    let card = document.createElement("div");
     card.classList = "card-body";
 
     const idImg = "img" + idx;
+    let dateSplit = element.date.split(",");
+    let wodElementDate = new Date(dateSplit[0], dateSplit[1], dateSplit[2]);
 
-    const content = `
+    let content = `
     
-    <div class="col-md-4 col-sm-12 p-3 ">
+    <div class="col-md-4 col-sm-12 p-3">
         <div class="card mt-3 mb-3" style="width: 18rem">
         <a href="#" data-toggle="modal" data-target="#exampleModal">
           <img  class="card-img-top overlay" id="${idImg}"
@@ -52,13 +53,13 @@ const loadWods = function () {
           <div class="card-body">
             <p class="card-text">
               <h4>${element.title}</h4>
-              <div class="today-date">${element.date.toDateString()}</div>
+              <div class="today-date">${wodElementDate.toDateString()}</div>
             </p>
           </div>
       </div>
     </div>`;
 
-    delightTmpContainer.innerHTML += content;
+    wodContainer.innerHTML += content;
 
     $("#exampleModal").on("show.bs.modal", function (event) {
       console.log(element.photoUrl);
@@ -68,8 +69,16 @@ const loadWods = function () {
   });
 };
 
-createArrayWod();
-loadWods();
+function wodList() {
+  $.getJSON("/JSONFILES/Wod/wodList.json", (wods) => {
+    wods.forEach((wod, i) => {
+      arrayWod.push(wod);
+    });
+  });
+}
+wodList();
+//createArrayWod();
+loadWods(arrayWod);
 
 /*
     TO DO LIST FOR ANDREEA RADU ⓜⓜⓜⓜ 
@@ -88,4 +97,3 @@ loadWods();
 
     Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
 */
-

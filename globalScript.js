@@ -1,40 +1,46 @@
+$.ajaxSetup({
+  async: false,
+});
+
 var loginBtn = document.getElementById("mySecNavLogin");
 var registerBtn = document.getElementById("mySecNavRegister");
 var myAccountBtn = document.getElementById("mySecNavMyAccount");
 var logoutBtn = document.getElementById("mySecNavLogout");
+var carouselContainer = document.getElementById("mycarouselInner");
+var interestsContainer = document.getElementById("myAreasOfInterests");
+var descriptionContainer = document.getElementById("descriptionArea");
 
 function isUserLoggedIn() {
+  // Credentials - declarat in login.js
+  const cred = localStorage.getItem("Credentials");
 
-    // Credentials - declarat in login.js 
-    const cred = localStorage.getItem('Credentials');
-
-    if (cred != null && cred != '') {
-        return true;
-    } else {
-        return false;
-    }
-
+  if (cred != null && cred != "") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function logout() {
-    localStorage.clear();
+  localStorage.removeItem("Credential");
 }
 
-const displayUserMenu = function(isView) {
+const displayUserMenu = function (isView) {
+  if (isView) {
+    myAccountBtn.classList.remove("d-none");
+    logoutBtn.classList.remove("d-none");
+    loginBtn.classList.add("d-none");
+    registerBtn.classList.add("d-none");
+  } else {
+    myAccountBtn.classList.add("d-none");
+    logoutBtn.classList.add("d-none");
+    loginBtn.classList.remove("d-none");
+    registerBtn.classList.remove("d-none");
+  }
 
-    if (isView) {
-        myAccountBtn.classList.remove('d-none');
-        logoutBtn.classList.remove('d-none');
-        loginBtn.classList.add('d-none');
-        registerBtn.classList.add('d-none');
-    } else {
-        myAccountBtn.classList.add('d-none');
-        logoutBtn.classList.add('d-none');
-        loginBtn.classList.remove('d-none');
-        registerBtn.classList.remove('d-none');
-    }
-}
-
+  //   let myObj = JSON.parse("JSONFiles/Index/carousel.json");
+  //   console.log(myObj);
+};
 
 /*
     TO DO LIST FOR ANDREEA RADU ⓜⓜⓜⓜ 
@@ -56,5 +62,21 @@ const displayUserMenu = function(isView) {
     Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
 */
 
+//TRYING HOVER OVER THE NAVBAR
+const nav = document.querySelector(".navbar-nav");
+const handleHoverMenuTabs = function (e, opacity) {
+  if (e.target.classList.contains(".nav-link")) {
+    const link = e.target;
+    const siblings = link.closest(".navbar-nav").querySelector(".nav-link");
 
-displayUserMenu(isUserLoggedIn());
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = opacity;
+    });
+  }
+};
+nav.addEventListener("mouseover", function (e) {
+  handleHoverMenuTabs(e, 0.5);
+});
+nav.addEventListener("mouseout", function (e) {
+  handleHoverMenuTabs(e, 1);
+});

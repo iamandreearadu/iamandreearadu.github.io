@@ -1,14 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto,sans-serif";
+
+  font-family: "Ubuntu, sans-serif";
 }
 
+body {
+  background-color: #fafafb;
+}
 .bg-image {
-  background-image: url("/Resources/bacground-food.jpg");
+  background-image: url("/Resources/backgroundimage.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
 }
 
 .nav-link,
@@ -19,68 +23,73 @@
   font-family: "Arial Black";
 }
 
+.nav-link,
+.navbar-item,
+.navbar:hover {
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+  font-size: 16px;
+}
 .dropdown-menu,
 .dropdown-item {
   background: none;
   color: whitesmoke;
+  font-family: "Arial Black";
+  font-size: 15px;
+  border: none;
 }
-
 .dropdown-item:hover {
   background: none;
   opacity: 50%;
   color: rgb(220, 220, 220);
-  font-weight: bolder;
 }
+/*   // TEXT ON IMAGE EXAMPLE CSS
 .bg-image::after {
-  content: "Enjoy your journey.";
-  white-space: pre;
+  content: "Enjoy your journey";
   font-style: italic;
   display: flow-root;
-  margin-top: 10rem;
+  margin-top: 27rem;
   position: relative;
   text-align: center;
   color: aliceblue;
   font-weight: bold;
   font-size: 40px;
+  font-family: "Roboto, sans-serif";
 }
+*/
 
-@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Asap", sans-serif;
-}
-body {
-  background-color: #fafafb;
-}
 section {
   min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgb(33, 33, 33);
   color: rgb(95, 67, 67);
 }
-
+/* SECTION #1 "SCROLL DONW TO DISCOVER OUR TOPICS"*/
 section:nth-child(1) {
-  color: #393b3b;
+  color: #fafafa;
 }
+
+/* SECTION #2 "TOPICS"*/
 section:nth-child(2) {
-  padding-top: 5rem;
-  color: #42455a;
+  color: #ffffff;
   background: #e0ffff;
   background-image: url("/Resources/mountainbackgroundpink.jfif");
   background-size: cover;
   background-position: 100%;
-  height: 80vh;
+  height: 65vh;
 }
+
+/* SECTION #3 "CAPTION"*/
 section:nth-child(3) {
   color: #e0ffff;
+  border-bottom: 2px solid #777778;
 }
+
+/* SECTION #4 "ABOUT US"*/
 section:nth-child(4) {
-  color: #42455a;
-  background: linear-gradient(to bottom, #efd9ea, #fffcff);
+  color: #777778;
   background-size: cover;
   background-position: 100%;
 }
@@ -100,21 +109,29 @@ section .text-container {
   display: flex;
 }
 section .text-container .text-box:nth-child(1) {
+  cursor: pointer;
   margin: 20px;
   padding: 20px;
   background-image: url("/Resources/chocolate.jpg");
+  background-position: 100%;
+  background-size: cover;
 }
 section .text-container .text-box:nth-child(2) {
+  cursor: pointer;
   margin: 20px;
   padding: 20px;
-  background-image: url("/Resources/Sport/backgroundfitness.jpg");
+  background-image: url("/Resources/Sport/running.jpg");
+  background-position: 100%;
+  background-size: cover;
 }
 section .text-container .text-box:nth-child(3) {
+  cursor: pointer;
   margin: 20px;
   padding: 20px;
   background-image: url("/Resources/Health/healthyfood.jpg");
+  background-position: 100%;
+  background-size: cover;
 }
-
 section .text-container .text-box h3 {
   font-size: 30px;
   text-align: center;
@@ -142,4 +159,14 @@ section .text-container .text-box h3 {
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
+}
+.btn-scrolldown {
+  cursor: pointer;
+  background-color: none;
+  border: 1px solid #e9e9e9;
+  font-size: 30px;
+  font-family: "Roboto,sans serif";
+  font-weight: 600;
+  box-shadow: 4px 2px #e9e9e9;
+  opacity: 0.5;
 }

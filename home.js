@@ -66,23 +66,23 @@ const loadInterests = function (array) {
     }
 
     let contentInterest = `
-      <div class="col-lg-3 interest-area ">
-        <img
-        class="rounded-circle"
-        src="${interests.picture}"
-        alt="Generic placeholder image"
-        width="${interests.pictureWidth}"
-        height="${interests.pictureHeight}"
-        />
-        <h3 class=" p-3">
-        <a  onclick="myScrollDown()"
-            class="btn-scrolldown ${btnScrollDown} pl-3 pr-3"
-            role="button"
-         > ${interests.titleBtn}
-        </a>
-        </h3>
-       <p>${interests.message}</p>
-       </div>`;
+    <div class="col-lg-4 interest-area p-4">
+      <img
+      class="img-interest "
+      src="${interests.picture}"
+      alt="Generic placeholder image"
+      width="${interests.pictureWidth}"
+      height="${interests.pictureHeight}"
+      />
+      <h3 class=" pt-3 ">
+      <a  onclick="myScrollDown()"
+          class="btn-scrolldown ${btnScrollDown} pl-3 pr-3"
+          role="button"
+       > ${interests.titleBtn}
+      </a>
+      </h3>
+     <p>${interests.message}</p>
+     </div>`;
     interestsContainer.innerHTML += contentInterest;
   });
 };
@@ -119,7 +119,7 @@ const loadDescriptions = function (array) {
     }
 
     let contentDescription = `
-    <div class="row featurette mt-5 pt-5" id="featurette">
+    <div class="row featurette reveal mt-5 pt-5" id="featurette">
         <div class="col-md-7 ${classText}">
             <h2 class="featurette-heading mb-5" id="${description.id}">
               ${description.titleSection}
@@ -230,7 +230,7 @@ btnScrollTo3.addEventListener("click", function (e) {
 
 const btnScrollTo4 = document.querySelector(".btn-scrolldown--4");
 const section4 = document.querySelector("#section--4");
-
+/*
 // Scrolling button 4
 btnScrollTo4.addEventListener("click", function (e) {
   const sec4Scroll = section4.getBoundingClientRect();
@@ -251,5 +251,25 @@ btnScrollTo4.addEventListener("click", function (e) {
 
   section4.scrollIntoView({ behavior: "smooth" });
 });
-
+*/
 displayUserMenu(isUserLoggedIn());
+
+/* REVEAL FUNCTION */
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+/* REVEAL FUNCTION */

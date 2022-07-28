@@ -1,4 +1,5 @@
 /* Interests */
+
 var interestsArray = [];
 
 const loadInterests = function (array) {
@@ -15,14 +16,12 @@ const loadInterests = function (array) {
       btnScrollDown = "btn-scrolldown--2";
     } else if (idx === 2) {
       btnScrollDown = "btn-scrolldown--3";
-    } else if (idx === 3) {
-      btnScrollDown = "btn-scrolldown--4";
     }
 
     let contentInterest = `
-      <div class="col-lg-3 interest-area ">
+      <div class="col-lg-4 interest-area p-4">
         <img
-        class="rounded-circle"
+        class="img-interest "
         src="${interests.picture}"
         alt="Generic placeholder image"
         width="${interests.pictureWidth}"
@@ -35,11 +34,40 @@ const loadInterests = function (array) {
          > ${interests.titleBtn}
         </a>
         </h3>
-       <p>${interests.message}</p>
+       <p style="font-size:22px">${interests.message}</p>
        </div>`;
     interestsContainer.innerHTML += contentInterest;
   });
 };
+// const topicsContainer = document.getElementById("myAreasOfTopics");
+// var topicsArray = [];
+
+// const loadTopics = function (array) {
+//   topicsContainer.innerHTML = "";
+//   let btnScrollDownTopics = "";
+//   array.forEach((topic, idx) => {
+//     let topics = document.createElement("div");
+//     topics.classList = "topics-container";
+
+//     if (idx === 0) {
+//       btnScrollDownTopics = "btn-scrolldown--1";
+//     } else if (idx === 1) {
+//       btnScrollDownTopics = "btn-scrolldown--2";
+//     } else if (idx === 2) {
+//       btnScrollDownTopics = "btn-scrolldown--3";
+//     }
+
+//     let contentTopics = `
+//     <div class="text-box topics-container ${btnScrollDownTopics}">
+//       <h3>${topic.titleBtn}</h3>
+//           <p>
+//           ${topic.message}
+//           </p>
+//     </div>
+//  `;
+//     topicsContainer.innerHTML += contentTopics;
+//   });
+// };
 
 function interests() {
   $.getJSON("/JSONFILES/Index/interests.json", (interest) => {
@@ -49,7 +77,19 @@ function interests() {
   });
 }
 interests();
+
+// function topicsJsonFunction() {
+//   $.getJSON("/JSONFILES/Practice/practiceTopicsDelights.json", (topic) => {
+//     topic.forEach((int, i) => {
+//       topicsArray.push(int);
+//     });
+//   });
+// }
+// topicsJsonFunction();
+// loadTopics(topicsArray);
+
 loadInterests(interestsArray);
+
 /* Interests */
 
 /* Description Interests*/
@@ -184,7 +224,7 @@ btnScrollTo3.addEventListener("click", function (e) {
 
 const btnScrollTo4 = document.querySelector(".btn-scrolldown--4");
 const section4 = document.querySelector("#section--4");
-
+/*
 // Scrolling button 4
 btnScrollTo4.addEventListener("click", function (e) {
   const sec4Scroll = section4.getBoundingClientRect();
@@ -205,7 +245,7 @@ btnScrollTo4.addEventListener("click", function (e) {
 
   section4.scrollIntoView({ behavior: "smooth" });
 });
-
+*/
 displayUserMenu(isUserLoggedIn());
 
 function reveal() {

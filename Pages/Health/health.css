@@ -1,6 +1,5 @@
 body {
-  background-color: #f4f7f6;
-  margin-top: 20px;
+  background: transparent;
 }
 
 .bg-image-health {
@@ -14,10 +13,27 @@ body {
   transition: 0.5s;
   border: 0;
   margin-bottom: 30px;
-  border-radius: 0.55rem;
+  border-radius: 5px;
   position: relative;
   width: 100%;
-  box-shadow: 0 2px 9px 0 rgba(121, 121, 121, 30%);
+  box-shadow: 0 2px 30px 0 rgba(121, 121, 121, 30%);
+}
+
+.featurette,
+.post-health-item {
+  background-color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 30px 0 rgba(121, 121, 121, 30%);
+  width: 60rem;
+}
+
+.instagram-post-health {
+  cursor: pointer;
+  width: 8.2rem;
+  height: 8.2rem;
+  background-position: 100%;
+  background-size: cover;
 }
 .card .body {
   color: #444;
@@ -269,12 +285,4 @@ body {
   .blog-page .single_post .footer {
     padding: 30px;
   }
-}
-
-.featurette {
-  background-color: #ffffff;
-  width: 51rem;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  box-shadow: 0 2px 9px 0 rgba(121, 121, 121, 30%);
 }

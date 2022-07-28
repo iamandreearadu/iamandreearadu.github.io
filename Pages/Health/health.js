@@ -19,17 +19,12 @@
 */
 
 var postsContainer = document.getElementById("postsContainer");
-
+var instagramContainer = document.getElementById("instagramContainer");
 var postsArray = [];
+var carouselArray = [];
+var instagramArray = [];
 
-function healthPostJson() {
-  $.getJSON("/JSONFiles/Health/healthPost.json", (posts) => {
-    posts.forEach((post, ind) => {
-      postsArray.push(post);
-    });
-  });
-}
-
+/* HEALTH POST FUNCTION CONTAINER  */
 const loadHealthPosts = function (array) {
   postsContainer.innerHTML = "";
 
@@ -37,7 +32,7 @@ const loadHealthPosts = function (array) {
     let postHealth = document.createElement("div");
     postHealth.classList = "post-health-item";
     let content = ` 
-    <div class="row featurette col-lg-12 mt-5  ml-3" id="featurette">
+    <div class="row featurette post-health-item col-lg-12 mt-5  ml-3" id="featurette">
       <div class="col-md-7 ${post.classText}">
 
       <button class="btn btn-light m-2" style="float: right">
@@ -71,5 +66,96 @@ const loadHealthPosts = function (array) {
   });
 };
 
+function healthPostJson() {
+  $.getJSON("/JSONFiles/Health/healthPost.json", (posts) => {
+    posts.forEach((post, ind) => {
+      postsArray.push(post);
+    });
+  });
+}
+
 healthPostJson();
 loadHealthPosts(postsArray);
+/*
+ HEALTH POST FUNCTION CONTAINER 
+ */
+
+/* CAROUSEL FUNCTION CONTAINER */
+const loadCarousel = function (array) {
+  carouselContainer.innerHTML = "";
+  let activeClass = "";
+
+  array.forEach((slide, idx) => {
+    let carusel = document.createElement("div");
+    carusel.classList = "carousel-item";
+
+    if (idx < 1) {
+      activeClass = "active";
+    } else {
+      activeClass = "";
+    }
+
+    let textPositionClass = "";
+    if (idx === 0 || idx === 2) {
+      textPositionClass = "text-right text-dark";
+    } else {
+      textPositionClass = "text-left";
+    }
+
+    let contentCarousel = `
+        <div class="carousel-item ${activeClass}" style="background-image: url(${slide.picture});background-position: 100%;background-size: cover;" >
+
+            <div class="container">
+                <div class="carousel-caption ${textPositionClass}">
+                    <h1 style="font-weight: 600;">${slide.title} </h1>
+                    <h5 style="font-weight: 600; font-size:22px">${slide.subtitle}</h5>
+                  
+                    <p><a class="btn btn-lg btn-light" href="${slide.href}" role="button">${slide.btn}</a></p>
+                </div>
+            </div>
+        </div>
+    `;
+
+    carouselContainer.innerHTML += contentCarousel;
+  });
+};
+
+function carousel() {
+  $.getJSON("/JSONFILES/Health/carousel.json", (slider) => {
+    slider.forEach((slide, ind) => {
+      carouselArray.push(slide);
+    });
+  });
+}
+carousel();
+loadCarousel(carouselArray);
+/* 
+CAROUSEL FUNCTION CONTAINER
+ */
+
+/* INSTAGRAM FUNCTION CONTAINER */
+const loadInstagramPosts = function (array) {
+  instagramContainer.innerHTML = "";
+
+  array.forEach((post, idx) => {
+    let postHealth = document.createElement("li");
+    postHealth.classList = "instagram-post-health";
+
+    let contentInstagramPost = `<li class="instagram-post-health" href="${post.link}" style="background-image:url(${post.image});" >
+  </li> `;
+    instagramContainer.innerHTML += contentInstagramPost;
+  });
+};
+
+function instagramPostJson() {
+  $.getJSON("/JSONFILES/Health/instagramposts.json", (posts) => {
+    posts.forEach((post, ind) => {
+      instagramArray.push(post);
+    });
+  });
+}
+instagramPostJson();
+loadInstagramPosts(instagramArray);
+/* 
+INSTAGRAM FUNCTION CONTAINER
+ */

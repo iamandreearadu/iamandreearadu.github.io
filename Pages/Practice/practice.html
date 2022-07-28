@@ -29,7 +29,7 @@
     <!-- END BOOTSTRAP STYLES-->
 
     <link rel="stylesheet" href="/Pages/Practice/practice.css" />
-    <link rel="stylesheet" href="/style.css" />
+   <!-- <link rel="stylesheet" href="/style.css" /> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -44,7 +44,7 @@
           class="page-header pt-2"
           style="
             text-align: center;
-            font-family: Ubuntu;
+            font-family: inherit;
             opacity: 50%;
             border-bottom: 1px solid whitesmoke;
           "
@@ -146,7 +146,9 @@
             </ul>
           </div>
         </nav>
+        <p class="fixed-bottom text-center d-block font-weight-bold text-white" style=" position: absolute;font-size: 3rem;font-family: Ubuntu; font-style: italic ;color: rgb(229, 229, 229);">Enjoy your journey</p>
       </div>
+
     </div>
 
     <div role="main">
@@ -196,38 +198,37 @@
         <div class="container reveal">
           <h2>CHOOSE WHAT INTERESTS YOU</h2>
           <div class="text-container">
-               <!-- INTERESTS AREA-->
-      <div class="container marketing">
+        <!-- INTERESTS AREA-->
+      <div style="display:flex" class="containers marketing">
         <div
           id="myAreasOfInterests"
-          class="row text-center"
-          id="indexShortLinks"
+          class="row text-center interest-container" id="indexShortLinks"
         ></div>
         <!-- INTERESTS AREA-->
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="container reveal">
-          <h2>Caption</h2>
-          <div class="text-container">
+      <section style="display: flex">
+        <div class="container reveal" >
+          <h2 style="color:black">Caption</h2>
+          <div class="text-container "  id="myAreasOfTopics">
             <div class="text-box">
-              <h3>Section Text</h3>
+              <h3>DELIGHTS NEST</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 eius molestiae perferendis eos provident vitae iste.
               </p>
             </div>
             <div class="text-box">
-              <h3>Section Text</h3>
+              <h3>FITNESS</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 eius molestiae perferendis eos provident vitae iste.
               </p>
             </div>
             <div class="text-box">
-              <h3>Section Text</h3>
+              <h3>HEALTH</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 eius molestiae perferendis eos provident vitae iste.
@@ -252,7 +253,7 @@
       </div>
     </div>
     <!--FOOTER-->
-    <footer class="bg-dark text-center text-white mt-5">
+    <footer class="bg-dark text-center text-white">
       <div class="container p-4 pb-0">
         <div class="mb-4">
           <a

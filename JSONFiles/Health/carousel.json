@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "picture": "/Resources/Health/backgroundhealth.jpg",
+    "title": "Vegan Goodies",
+    "subtitle": "The best source of nutrients",
+    "btn": "Check Out Our Delights",
+    "href": "/Pages/Delights/delights.html"
+  },
+
+  {
+    "id": 2,
+    "picture": "/Resources/Health/healthylifestyle.jpg",
+    "title": "Workout and Nutrion Programs",
+    "subtitle": "Change your bad habits into good ones",
+    "btn": "Choose Your Program",
+    "href": "/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+  },
+
+  {
+    "id": 3,
+    "picture": "/Resources/background-contactus.jpg",
+    "title": "Hope you will find what you are looking for",
+    "subtitle": "Please write us for any question relevance",
+    "btn": "Contact Us",
+    "href": "/Pages/Contact/contact.html"
+  }
+]

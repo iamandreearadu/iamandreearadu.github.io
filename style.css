@@ -11,19 +11,6 @@
   height: 100vh;
 }
 
-.bg-image::after {
-  content: "Enjoy your journey";
-  white-space: pre;
-  font-style: italic;
-  display: flow-root;
-  margin-top: 25rem;
-  position: relative;
-  text-align: center;
-  color: aliceblue;
-  font-weight: bold;
-  font-size: 40px;
-}
-
 .nav-link,
 .navbar {
   text-decoration: none;
@@ -37,6 +24,7 @@
 .navbar:hover {
   text-decoration: none;
   color: rgb(219, 219, 219);
+  font-size: 16px;
 }
 
 .dropdown-menu,
@@ -70,30 +58,55 @@
 }
 
 .btn-scrolldown {
-  background-color: rgb(250, 154, 215);
   cursor: pointer;
-  border: 1px solid rgb(250, 154, 215);
   border-radius: 2px;
   color: black;
   font-style: italic;
 }
 
+.btn-scrolldown--1 {
+  background-color: rgb(250, 154, 215);
+}
+
 .btn-scrolldown--2 {
   background-color: #c3c2c2;
-  border: 1px solid #c3c2c2;
 }
 
 .btn-scrolldown--3 {
-  background-color: #fac696;
-  border: 1px solid #fac696;
+  background-color: #f7cea7;
 }
 
 .btn-scrolldown--4 {
   background-color: #afbefd;
-  border: 1px solid #afbefd;
 }
 
 .btn-scrolldown:hover {
-  color: black;
-  opacity: 60%;
+  opacity: 80%;
 }
+
+.carousel-title {
+  font-weight: 600;
+}
+
+.description-over-img {
+  position: absolute;
+  font-size: 3rem;
+  font-family: Ubuntu;
+  font-style: italic;
+  color: rgb(229, 229, 229);
+}
+
+/* REVEAL */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* REVEAL */

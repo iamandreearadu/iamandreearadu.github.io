@@ -43,19 +43,21 @@
   </head>
 
   <body>
-    <div class="bg-image-health">
+    <header class="bg-image-health">
       <!--ANDREEA RADU TITLE PAGE-->
       <div
         class="page-header pt-2"
         style="
           text-align: center;
           font-family: Ubuntu;
-          opacity: 50%;
-          border-bottom: 1px solid whitesmoke;
+          opacity: 65%;
+          border-bottom: 1px solid rgba(216, 216, 216, 0.301);
         "
       >
-        <h1 style="color: whitesmoke; margin-bottom: 0">ANDREEA RADU</h1>
-        <h1 style="font-size: 10px; color: rgba(245, 245, 245, 0.881)">
+        <h1 class="page-title-name" style="color: white; margin-bottom: 0">
+          ANDREEA RADU
+        </h1>
+        <h1 class="page-title-des" style="font-size: 10px; color: white">
           OFFICIAL PERSONAL BLOG
         </h1>
       </div>
@@ -152,15 +154,15 @@
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
 
     <main role="main">
       <!--      MAIN    -->
 
       <div id="main-content" class="blog-page">
-        <div class="containe p-4">
+        <div class="container-health">
           <div class="row clearfix">
-            <div class="col-lg-8 col-md-12 left-box">
+            <div class="col-lg-8 col-md-12 left-box p-5">
               <div class="card">
                 <div class="body">
                   <div class="img-post">
@@ -183,6 +185,7 @@
                   </h6>
                 </div>
               </div>
+
               <!-- POSTS CONTAINER-->
               <div id="postsContainer"></div>
               <!-- POSTS CONTAINER-->
@@ -207,7 +210,8 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-12 right-box">
+
+            <div class="col-lg-4 col-md-12 right-box p-5">
               <div class="card">
                 <div class="body search">
                   <div class="input-group m-b-0">
@@ -270,73 +274,15 @@
                 <div class="header">
                   <h2>Instagram Post</h2>
                 </div>
-                <div class="body widget">
-                  <ul class="list-unstyled instagram-plugin m-b-0">
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);"
-                        ><img
-                          src="https://via.placeholder.com/80x80/FFB6C1/000000"
-                          alt="image description"
-                      /></a>
-                    </li>
-                  </ul>
+
+                <!--INSTAGRAM POSTS CONTAINER-->
+                <div class="bodies widget instagram-container p-2">
+                  <ul
+                    class="list-unstyled instagram-plugin m-b-0"
+                    id="instagramContainer"
+                  ></ul>
                 </div>
+                <!--INSTAGRAM POSTS CONTAINER-->
               </div>
               <div class="card">
                 <div class="header">
@@ -364,13 +310,60 @@
                 </div>
               </div>
             </div>
+
+            <!-- SLIDE CONTAINER-->
+            <div
+              id="myCarousel"
+              class="carousel slide container-fluid col-lg-12 col-md-12"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#myCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+              </ol>
+              <div
+                id="mycarouselInner"
+                class="carousel-inner"
+                style="display: flex; height: 400px; width: 100%"
+              ></div>
+              <a
+                class="carousel-control-prev"
+                href="#myCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#myCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <!-- SLIDE CONTAINER-->
           </div>
         </div>
       </div>
       <!--       MAIN         -->
     </main>
 
-    <footer class="bg-dark text-center text-white mt-5">
+    <footer class="bg-dark text-center text-white mt-3">
       <div class="container p-4 pb-0">
         <section class="mb-4">
           <a

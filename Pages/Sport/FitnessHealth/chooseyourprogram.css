@@ -37,12 +37,11 @@ body {
   background-image: url("/Resources/Sport/cyp.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
 }
 .container {
-  margin-top: 80px;
+  margin-top: 60px;
 }
-
 .container .col-lg-4 {
   display: flex;
   justify-content: center;

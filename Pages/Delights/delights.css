@@ -15,9 +15,10 @@
   background-image: url("/Resources/background-food.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
 }
-.bg-image-delights::after {
+
+/* .bg-image-delights::after {
   content: "Delights Nest, the heaven of flavours and colors";
   font-style: italic;
   display: flow-root;
@@ -27,4 +28,4 @@
   color: aliceblue;
   font-weight: bold;
   font-size: 40px;
-}
+} */

@@ -11,17 +11,6 @@ const loadMore = document.getElementById("loadmore");
 
 /* GLOBAL VARIABLES */
 //console.log(itemPerPage.value);
-// function checkUserCart() {
-//   const cartOfDelights = localStorage.getItem("Cart");
-
-//   if (
-//     cartOfDelights !== null ||
-//     cartOfDelights !== undefined ||
-//     cartOfDelights !== ""
-//   ) {
-//   }
-// }
-
 function checkUserDelights() {
   const savedDelights = localStorage.getItem("Delights");
   if (

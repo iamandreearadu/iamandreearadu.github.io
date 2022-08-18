@@ -1,5 +1,5 @@
 $.ajaxSetup({
-  async: false
+  async: false,
 });
 
 var credentials = {
@@ -21,12 +21,10 @@ function submitLogin() {
   if (email == "" || password == "") {
     alert("Trebuie sa introduci datele complete");
   } else {
-
     let isValidated = false;
 
-    $.getJSON( 'users.json', (users) => {
-      users.forEach(user  => {
-
+    $.getJSON("users.json", (users) => {
+      users.forEach((user) => {
         if (user.email === email && user.password === password) {
           isValidated = true;
         }
@@ -39,13 +37,9 @@ function submitLogin() {
       var cred = JSON.stringify(credentials);
       window.localStorage.setItem("Credentials", cred);
       // SA pui aici URL-ul tau principal
-      window.location.replace("http://127.0.0.1:5501/");
-
+      window.location.replace("/index.html");
     } else {
       alert("Datele introduse sunt incorecte! Verifica fisierul users.json");
     }
-
   }
 }
-
-

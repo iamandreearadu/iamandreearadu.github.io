@@ -17,7 +17,10 @@
   background-size: cover;
   height: 100vh;
 }
-
+.card {
+  box-shadow: 0 15px 35px rgb(103, 103, 103, 60%);
+  width: 100%;
+}
 /* .bg-image-delights::after {
   content: "Delights Nest, the heaven of flavours and colors";
   font-style: italic;

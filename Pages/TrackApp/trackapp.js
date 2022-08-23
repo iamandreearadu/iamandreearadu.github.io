@@ -5,12 +5,13 @@ class Workout {
   id = (Date.now() + "").slice(-10);
   clicks = 0;
 
-  constructor(coords, distance, duration) {
+  constructor(coords, distance, duration, effortLvl) {
     // this.date = ...
     // this.id = ...
     this.coords = coords; // [lat, lng]
     this.distance = distance; // in km
     this.duration = duration; // in min
+    this.effortLvl = effortLvl;
   }
 
   _setDescription() {
@@ -30,8 +31,9 @@ class Workout {
 class Training extends Workout {
   type = "training";
 
-  constructor(coords, location, duration) {
-    super(coords, location, duration);
+  constructor(coords, location, duration, effortlvl) {
+    super(coords, duration, effortlvl);
+    this.location = location;
     this._setDescription();
   }
 }
@@ -39,9 +41,8 @@ class Training extends Workout {
 class Walking extends Workout {
   type = "walking";
 
-  constructor(coords, distance, duration, cadence) {
-    super(coords, distance, duration);
-    this.cadence = cadence;
+  constructor(coords, distance, duration, effortlvl) {
+    super(coords, distance, duration, effortlvl);
     this.calcPace();
     this._setDescription();
   }
@@ -56,9 +57,8 @@ class Walking extends Workout {
 class Running extends Workout {
   type = "running";
 
-  constructor(coords, distance, duration, cadence) {
-    super(coords, distance, duration);
-    this.cadence = cadence;
+  constructor(coords, distance, duration, effortLvl) {
+    super(coords, distance, duration, effortLvl);
     this.calcPace();
     this._setDescription();
   }
@@ -73,9 +73,9 @@ class Running extends Workout {
 class Cycling extends Workout {
   type = "cycling";
 
-  constructor(coords, distance, duration, elevationGain) {
-    super(coords, distance, duration);
-    this.elevationGain = elevationGain;
+  constructor(coords, distance, duration, effortlvl) {
+    super(coords, distance, duration, effortlvl);
+    // this.elevationGain = elevationGain;
     // this.type = 'cycling';
     this.calcSpeed();
     this._setDescription();
@@ -102,6 +102,7 @@ const inputDuration = document.querySelector(".form__input--duration");
 const inputCadence = document.querySelector(".form__input--cadence");
 const inputElevation = document.querySelector(".form__input--elevation");
 const inputLocation = document.querySelector(".form__input--location");
+const inputEffortLvl = document.querySelector(".form__input--effortlvl");
 
 class App {
   #map;
@@ -118,7 +119,7 @@ class App {
 
     // Attach event handlers
     form.addEventListener("submit", this._newWorkout.bind(this));
-    inputType.addEventListener("change", this._toggleElevationField);
+    //  inputType.addEventListener("change", this._toggleElevationField);
     containerWorkouts.addEventListener("click", this._moveToPopup.bind(this));
   }
 
@@ -162,11 +163,7 @@ class App {
 
   _hideForm() {
     // Empty inputs
-    inputDistance.value =
-      inputDuration.value =
-      inputCadence.value =
-      inputElevation.value =
-        "";
+    inputDistance.value = inputDuration.value = inputEffortLvl.value = "";
 
     form.style.display = "none";
     form.classList.add("hidden");
@@ -189,52 +186,73 @@ class App {
     const type = inputType.value;
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
+    const effortLvl = +inputEffortLvl.value;
     const { lat, lng } = this.#mapEvent.latlng;
     let workout;
 
     // If workout training, create walking object
     if (type === "training") {
       const location = +inputLocation.value;
+      const effortlvl = +inputEffortLvl.value;
       // Check if data is valid
       if (
         // !Number.isFinite(duration) ||
 
-        !validInputs(location, duration) ||
-        !allPositive(location, duration)
+        !validInputs(location, duration, effortlvl) ||
+        !allPositive(location, duration, effortlvl)
       )
         return alert("Inputs have to be positive numbers!");
 
-      workout = new Training([lat, lng], location, duration);
+      workout = new Training([lat, lng], location, duration, effortlvl);
     }
 
-    // If workout running, create running object
-    if (type === "running") {
-      const cadence = +inputCadence.value;
+    // If workout walking, create walking object
+    if (type === "walking") {
+      const effortlvl = +inputEffortLvl.value;
 
       // Check if data is valid
       if (
         // !Number.isFinite(distance) ||
         // !Number.isFinite(duration) ||
         // !Number.isFinite(cadence)
-        !validInputs(distance, duration, cadence) ||
-        !allPositive(distance, duration, cadence)
+        !validInputs(distance, duration, effortlvl) ||
+        !allPositive(distance, duration, effortlvl)
       )
         return alert("Inputs have to be positive numbers!");
 
-      workout = new Running([lat, lng], distance, duration, cadence);
+      workout = new Walking([lat, lng], distance, duration, effortlvl);
+    }
+
+    // If workout running, create running object
+    if (type === "running") {
+      const effortlvl = +inputEffortLvl.value;
+
+      //  const cadence = +inputCadence.value;
+
+      // Check if data is valid
+      if (
+        // !Number.isFinite(distance) ||
+        // !Number.isFinite(duration) ||
+        // !Number.isFinite(cadence)
+        !validInputs(distance, duration, effortlvl) ||
+        !allPositive(distance, duration, effortlvl)
+      )
+        return alert("Inputs have to be positive numbers!");
+
+      workout = new Running([lat, lng], distance, duration, effortlvl);
     }
 
     // If workout cycling, create cycling object
     if (type === "cycling") {
-      const elevation = +inputElevation.value;
+      const effortlvl = +inputEffortLvl.value;
 
       if (
-        !validInputs(distance, duration, elevation) ||
-        !allPositive(distance, duration)
+        !validInputs(distance, duration, effortlvl) ||
+        !allPositive(distance, duration, effortlvl)
       )
         return alert("Inputs have to be positive numbers!");
 
-      workout = new Cycling([lat, lng], distance, duration, elevation);
+      workout = new Cycling([lat, lng], distance, duration, effortlvl);
     }
 
     // Add new object to workout array
@@ -291,10 +309,38 @@ class App {
       <span class="workout__value">${workout.duration}</span>
       <span class="workout__unit">min</span>
     </div>
+    <div class="workout__details">
+          <span class="workout__icon">🚩</span>
+          <span class="workout__value">${workout.effortLvl}</span>
+          <span class="workout__unit">Lvl</span>
+        </div>
    
   </li>
   `;
 
+    if (workout.type === "walking")
+      html += `
+      <span class="workout__icon">🚶🏻</span>
+      <span class="workout__value">${workout.distance}</span>
+      <span class="workout__unit">km</span>
+    </div>
+    <div class="workout__details">
+      <span class="workout__icon">⏱</span>
+      <span class="workout__value">${workout.duration}</span>
+      <span class="workout__unit">min</span>
+    </div>
+      <div class="workout__details">
+        <span class="workout__icon">⚡️</span>
+        <span class="workout__value">${workout.pace.toFixed(1)}</span>
+        <span class="workout__unit">min/km</span>
+      </div>
+      <div class="workout__details">
+        <span class="workout__icon">🦶🏼</span>
+        <span class="workout__value">${workout.cadence}</span>
+        <span class="workout__unit">spm</span>
+      </div>
+    </li>
+    `;
     if (workout.type === "running")
       html += `
        <span class="workout__icon">🏃‍♂️</span>
@@ -312,9 +358,9 @@ class App {
           <span class="workout__unit">min/km</span>
         </div>
         <div class="workout__details">
-          <span class="workout__icon">🦶🏼</span>
-          <span class="workout__value">${workout.cadence}</span>
-          <span class="workout__unit">spm</span>
+          <span class="workout__icon">🚩</span>
+          <span class="workout__value">${workout.effortLvl}</span>
+          <span class="workout__unit">EfL</span>
         </div>
       </li>
       `;
@@ -336,9 +382,9 @@ class App {
           <span class="workout__unit">km/h</span>
         </div>
         <div class="workout__details">
-          <span class="workout__icon">⛰</span>
-          <span class="workout__value">${workout.elevationGain}</span>
-          <span class="workout__unit">m</span>
+          <span class="workout__icon">🚩</span>
+          <span class="workout__value">${workout.effortLvl}</span>
+          <span class="workout__unit">EfL</span>
         </div>
       </li>
       `;

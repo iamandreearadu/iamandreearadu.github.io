@@ -1,0 +1,18 @@
+/* .sidebarmenu {
+  background: linear-gradient(to right, #2e2e2e, #c5c6c6);
+}
+
+.mainpage {
+  background: linear-gradient(to right, #c5c6c6, #a2a2a2);
+} */
+
+.sidebarmenu {
+  background-color: rgb(27, 27, 27);
+}
+.mainpage {
+  background-color: rgb(27, 27, 27);
+}
+
+.cards {
+  display: flex;
+}

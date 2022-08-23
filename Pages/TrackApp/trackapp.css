@@ -7,13 +7,13 @@
 
 .navbar,
 .nav-link {
-  color: rgba(0, 0, 0, 0.63);
+  color: rgb(255, 255, 255);
 }
 :root {
-  --color-brand--1: #ffb545;
-  --color-brand--2: #00c46a;
+  --color-brand--1: #b5a2fc;
+  --color-brand--2: #a2edc2;
 
-  --color-dark--1: #ffffff;
+  --color-dark--1: #f1f1f1;
   --color-dark--2: #5e5e5e;
   --color-light--1: #aaa;
   --color-light--2: #3a3a3a;
@@ -45,11 +45,11 @@ main {
   display: flex;
 }
 
-/* GENERAL */
+/* GENERAL
 a:link,
 a:visited {
   color: var(--color-brand--1);
-}
+} */
 
 /* SIDEBAR */
 .sidebar {

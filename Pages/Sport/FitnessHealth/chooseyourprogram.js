@@ -85,7 +85,7 @@ const loadDescribePrograms = function (array) {
     }
 
     let content = `
-    <div class="row featurette col-lg-12 mt-5 pt-5" id="featurette" style="background-image:url(${area.pictureBackround})">
+    <div class="row featurette col-lg-12 mt-3 p-2" id="featurette" style="background-image:url(${area.pictureBackround})">
         <div class="col-md-7 ${classText}">
             <h1 class="featurette-heading mb-5" id="${area.id}">
               ${area.sectionName}
@@ -94,7 +94,7 @@ const loadDescribePrograms = function (array) {
               ${area.description}
             </p>
         </div>
-        <div class="col-md-5 ${classImg}">
+        <div class="thumbnail ${classImg}">
             <img
               class="featurette-image img-fluid mx-auto"
               src="${area.picture}"

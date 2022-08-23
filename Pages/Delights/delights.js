@@ -109,7 +109,7 @@ const loadDelights = function (array) {
     // Construct card content
     const content = `
       <div class="col-md-4 col-sm-12 p-3 ">
-        <div class="card" style="width: 100%; box-shadow: 5px 5px #e4e4e4;">
+        <div class="card" >
             <img class="card-img-top" src="${delight.photoUrl}" alt="${delight.title}" />
             <div class="card-body">
                 <h5 class="card-title">${delight.title} <img style="float:right;height:${delight.typeImgHeight};width:${delight.typeImgWidth}" src="${delight.typeImg}" /> </h5>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "fullname": "Alexandru Boldisor",
+    "email": "alexandru.boldisor@boldinet.ro",
+    "phone": "0723 435 298",
+    "dateofbirth": "25 Apr 1995",
+    "address": "Sibiu, Romania",
+    "password": "password"
+  },
+  {
+    "id": 2,
+    "fullname": "Radu Andreea",
+    "email": "andreea1997.radu@gmail.com",
+    "phone": "0758 659 223",
+    "dateofbirth": "08 Apr 1997",
+    "address": "Sibiu, Romania",
+    "password": "test"
+  }
+]

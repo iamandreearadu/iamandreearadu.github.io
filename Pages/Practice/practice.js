@@ -19,7 +19,7 @@ const loadInterests = function (array) {
     }
 
     let contentInterest = `
-      <div class="col-lg-4 interest-area p-4">
+      <div class="col-lg-4 col-sm-12 interest-area p-4">
         <img
         class="img-interest "
         src="${interests.picture}"
@@ -29,12 +29,12 @@ const loadInterests = function (array) {
         />
         <h3 class=" pt-3 ">
         <a  onclick="myScrollDown()"
-            class="btn-scrolldown ${btnScrollDown} pl-3 pr-3"
+            class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
             role="button"
          > ${interests.titleBtn}
         </a>
         </h3>
-       <p style="font-size:22px">${interests.message}</p>
+       <p style="font-size:18px">${interests.message}</p>
        </div>`;
     interestsContainer.innerHTML += contentInterest;
   });
@@ -265,3 +265,11 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+const navToggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+const loginBtnClass = document.querySelector(".btn-login");
+navToggle.addEventListener("click", function () {
+  loginBtnClass.classList.toggle("ml-5");
+  links.classList.toggle("show-links");
+});

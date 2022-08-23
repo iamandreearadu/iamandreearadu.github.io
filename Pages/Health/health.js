@@ -32,22 +32,41 @@ const loadHealthPosts = function (array) {
     let postHealth = document.createElement("div");
     postHealth.classList = "post-health-item";
     let content = ` 
-    <div class="row featurette post-health-item col-lg-12 mt-5  ml-3" id="featurette">
-      <div class="col-md-7 ${post.classText}">
+    <div class=" row featurette post-health-item col-lg-12 mt-5  ml-3" id="featurette" style="background-image: url('${post.photoUrl}');">
+      <div class="question-title">
+    <div class="col-lg-12 col-sm-12">
+      <button type="button" class="question-btn">
+      <span class="plus-icon ">
+        <i class="fa fa-plus-square"></i>
+      </span>
+      <span class="minus-icon">
+        <i class="fa fa-minus-square"></i>
+      </span>
+     </button>
+        <h3 class="featurette-heading ">
+          ${post.title}
+        </h3>
+        </div>
+        <div class="question-text">
+        <h5 class="text-white">
+          ${post.description}
+        </h5>
+        </div>
+      </div>
+     </div>
+     
+     `;
 
-      <button class="btn btn-light m-2" style="float: right">
+    postsContainer.innerHTML += content;
+  });
+};
+/* after ${class.TEXT} | first style /////////
+ <button class="btn btn-light m-2" style="float: right">
           Continue Reading
         </button>
-
-        <h2 class="featurette-heading p-2">
-          ${post.title}
-        </h2>
-        
-        <h6>
-          ${post.description}
-        </h6>
-      </div>
-      <div class="col-md-5 ${post.classImg}">
+        */
+/* before last div | first style //////////
+   <div class="col-md-5 ${post.classImg}">
         <img
           class="featurette-image img-fluid mx-auto "
           src="${post.photoUrl}"
@@ -56,16 +75,7 @@ const loadHealthPosts = function (array) {
           data-holder-rendered="true"
         />
       </div>
-      
-      
-     </div>
-     
-     `;
-
-    postsContainer.innerHTML += content;
-  });
-};
-
+      */
 function healthPostJson() {
   $.getJSON("/JSONFiles/Health/healthPost.json", (posts) => {
     posts.forEach((post, ind) => {
@@ -179,3 +189,20 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 /* REVEAL FUNCTION */
+
+/* LOAD ARTICLES BY CLICKING BTN FUNCTION */
+const postItem = document.querySelectorAll(".post-health-item");
+postItem.forEach(function (post) {
+  const btn = post.querySelector(".question-btn");
+
+  btn.addEventListener("click", function () {
+    postItem.forEach(function (item) {
+      if (item !== post) {
+        item.classList.remove("show-text");
+      }
+    });
+
+    post.classList.toggle("show-text");
+  });
+});
+/* LOAD ARTICLES BY CLICKING BTN FUNCTION */

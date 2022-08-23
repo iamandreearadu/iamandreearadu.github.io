@@ -1,5 +1,59 @@
 [
   {
+    "id": 10,
+    "title": "Reasons to get more sleep",
+    "photoUrl": "/Resources/Health/sleep.jpg",
+    "typeImgHeight": "230px",
+    "typeImgWidth": "280px",
+    "description": "A lack of sleep at night can make you cranky the next day. And over time, skimping on sleep can mess up more than just your morning mood. Studies show getting quality sleep on a regular basis can help improve all sorts of issues, from your blood sugar to your workouts.",
+    "classText": "order-md-2",
+    "classImg": "order-md-1"
+  },
+  {
+    "id": 9,
+    "title": "What are the most healthful high fat foods?",
+    "photoUrl": "/Resources/Health/healthyfats.jpg",
+    "typeImgHeight": "230px",
+    "typeImgWidth": "290px",
+    "description": "Monounsaturated and polyunsaturated fats, including omega-3 and omega-6 fatty acids, are both healthful fats. They can aid hormone function, memory, and the absorption of specific nutrients. Including healthful fats in a meal also creates a sense of fullness, slows down the digestion of carbohydrates, and adds flavor to food."
+  },
+  {
+    "id": 8,
+    "title": "Drink Water",
+    "photoUrl": "/Resources/Health/water.png",
+    "typeImgHeight": "250px",
+    "typeImgWidth": "290px",
+    "description": "Drinking Water Helps Maintain the Balance of Body Fluids. Your body is composed of about 60% water. The functions of these bodily fluids include digestion, absorption, circulation, creation of saliva, transportation of nutrients, and maintenance of body temperature. Water Helps Energize Muscles. Cells that don't maintain their balance of fluids and electrolytes shrivel, which can result in muscle fatigue. Water Helps Keep Skin Looking Good. Your skin contains plenty of water, and functions as a protective barrier to prevent excess fluid loss.",
+    "classText": "order-md-2",
+    "classImg": "order-md-1"
+  },
+  {
+    "id": 7,
+    "title": "Oats have a range of potential health benefits",
+    "photoUrl": "/Resources/Health/oatmeal.jpg",
+    "typeImgHeight": "280px",
+    "typeImgWidth": "310px",
+    "description": "Oats are loaded with dietary fiber (containing more than many other grains) and have a range of healthy cholesterol-lowering properties. Oats are rich in a specific type of fiber called beta-glucan. This particular type of fiber is known to help lower levels of bad cholesterol. One cup (81 grams) of dry oats contains 7.5 grams of fiber, the recommended daily intake of fiber is 25 grams for women and 38 grams for men. They are mainly eaten as porridge, as an ingredient in breakfast cereals, and in baked goods (oatcakes, oat cookies, and oat bread)."
+  },
+  {
+    "id": 6,
+    "title": "Reasons to get more sleep",
+    "photoUrl": "/Resources/Health/sleep.jpg",
+    "typeImgHeight": "230px",
+    "typeImgWidth": "280px",
+    "description": "A lack of sleep at night can make you cranky the next day. And over time, skimping on sleep can mess up more than just your morning mood. Studies show getting quality sleep on a regular basis can help improve all sorts of issues, from your blood sugar to your workouts.",
+    "classText": "order-md-2",
+    "classImg": "order-md-1"
+  },
+  {
+    "id": 5,
+    "title": "What are the most healthful high fat foods?",
+    "photoUrl": "/Resources/Health/healthyfats.jpg",
+    "typeImgHeight": "230px",
+    "typeImgWidth": "290px",
+    "description": "Monounsaturated and polyunsaturated fats, including omega-3 and omega-6 fatty acids, are both healthful fats. They can aid hormone function, memory, and the absorption of specific nutrients. Including healthful fats in a meal also creates a sense of fullness, slows down the digestion of carbohydrates, and adds flavor to food."
+  },
+  {
     "id": 4,
     "title": "Drink Water",
     "photoUrl": "/Resources/Health/water.png",

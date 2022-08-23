@@ -33,9 +33,9 @@ const loadHealthPosts = function (array) {
     postHealth.classList = "post-health-item";
     let content = ` 
     <div class=" row featurette post-health-item col-lg-12 mt-5  ml-3" id="featurette" style="background-image: url('${post.photoUrl}');">
-      <div class="question-title">
+      <div class="post-title">
     <div class="col-lg-12 col-sm-12">
-      <button type="button" class="question-btn">
+      <button type="button" class="post-btn">
       <span class="plus-icon ">
         <i class="fa fa-plus-square"></i>
       </span>
@@ -47,7 +47,7 @@ const loadHealthPosts = function (array) {
           ${post.title}
         </h3>
         </div>
-        <div class="question-text">
+        <div class="post-text">
         <h5 class="text-white">
           ${post.description}
         </h5>
@@ -193,7 +193,7 @@ window.addEventListener("scroll", reveal);
 /* LOAD ARTICLES BY CLICKING BTN FUNCTION */
 const postItem = document.querySelectorAll(".post-health-item");
 postItem.forEach(function (post) {
-  const btn = post.querySelector(".question-btn");
+  const btn = post.querySelector(".post-btn");
 
   btn.addEventListener("click", function () {
     postItem.forEach(function (item) {

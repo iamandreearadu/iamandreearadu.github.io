@@ -40,7 +40,7 @@
 
   <body>
     <div class="bg-image-delights">
-      <div
+      <!-- <div
         class="page-header pt-2"
         style="
           text-align: center;
@@ -54,7 +54,7 @@
           OFFICIAL PERSONAL BLOG
         </h1>
       </div>
-      <!--ANDREEA RADU TITLE PAGE-->
+     ANDREEA RADU TITLE PAGE
       <nav class="navbar navbar-expand-lg navbar-container">
         <a class="navbar navbar-item" href="/index.html">HOME</a>
         <button
@@ -141,7 +141,150 @@
             </li>
           </ul>
         </div>
+      </nav> -->
+      <nav>
+        <div class="nav-center">
+          <div class="nav-header">
+            <div>
+              <h3
+                style="
+                  font-family: Apple Chancery;
+                  color: whitesmoke;
+                  margin-bottom: 0;
+                  font-size: 1.5rem;
+                "
+              >
+                ANDREEA RADU
+              </h3>
+              <h1
+                style="text-align: center; font-size: 10px; color: whitesmoke"
+              >
+                OFFICIAL PERSONAL BLOG
+              </h1>
+            </div>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"> </i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Delights/delights.html"
+                >Delights</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="/Pages/Sport/sport.html"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Fitness
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/wod.html"
+                  >WOD</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+                  >Choose your program</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/challenges.html"
+                  >Challenges</a
+                >
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Health/health.html"> Health</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/TrackApp/trackapp.html"
+                >Tracker</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Contact/contact.html">Contact</a>
+            </li>
+            <li class="" id="mySecNavLogin">
+              <a
+                class="nav-link btn-login ml-5"
+                href="/Pages/Auth/Login/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="mr-5" id="mySecNavRegister">
+              <a
+                class="nav-link btn-register"
+                href="/Pages/Auth/Register/register.html"
+                >Register</a
+              >
+            </li>
+            <li class="mr-2 d-none" id="mySecNavMyAccount">
+              <a
+                class="nav-link btn-myacc"
+                href="/Pages/MyAccount/myaccount.html"
+                >My account</a
+              >
+            </li>
+            <li class="mr-5 d-none" id="mySecNavLogout" onclick="logout()">
+              <a class="nav-link btn-logout" href="/">Logout</a>
+            </li>
+          </ul>
+          <!-- social media -->
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.facebook.com/r.deeea/">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/raduAndreeaa">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/raduandreeaa/?hl=ro">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/andreea-radu-1449b4153/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/iamandreearadu">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
+
+      <p
+        class="d-block font-weight-bold text-white"
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-family: Apple Chancery;
+          font-style: italic;
+          color: rgb(229, 229, 229);
+        "
+      >
+        Heaven of flavours and colors
+      </p>
     </div>
     <main class="container">
       <div class="ml-auto">
@@ -241,9 +384,9 @@
         </div>
       </div>
     </main>
-    <footer class="bg-dark text-center text-white mt-5">
-      <div class="container p-4 pb-0">
-        <section class="mb-4">
+    <footer class="bg-dark text-center text-white">
+      <!-- <div class="container p-4 pb-0">
+        <div class="mb-4">
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.facebook.com/r.deeea/"
@@ -283,13 +426,16 @@
           >
             <i class="fab fa-linkedin-in"></i>
           </a>
-        </section>
-      </div>
+        </div>
+      </div> -->
 
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
+      <div
+        class="copyright-section text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2022 Copyright:
         <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
+          >Radu Andreea | Front-End Developer</a
         >
       </div>
     </footer>

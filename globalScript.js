@@ -63,20 +63,29 @@ const displayUserMenu = function (isView) {
 */
 
 //TRYING HOVER OVER THE NAVBAR
-const nav = document.querySelector(".navbar-nav");
-const handleHoverMenuTabs = function (e, opacity) {
-  if (e.target.classList.contains(".nav-link")) {
-    const link = e.target;
-    const siblings = link.closest(".navbar-nav").querySelector(".nav-link");
+// const nav = document.querySelector(".navbar-nav");
+// const handleHoverMenuTabs = function (e, opacity) {
+//   if (e.target.classList.contains(".nav-link")) {
+//     const link = e.target;
+//     const siblings = link.closest(".navbar-nav").querySelector(".nav-link");
 
-    siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = opacity;
-    });
-  }
-};
-nav.addEventListener("mouseover", function (e) {
-  handleHoverMenuTabs(e, 0.5);
-});
-nav.addEventListener("mouseout", function (e) {
-  handleHoverMenuTabs(e, 1);
+//     siblings.forEach((el) => {
+//       if (el !== link) el.style.opacity = opacity;
+//     });
+//   }
+// };
+// nav.addEventListener("mouseover", function (e) {
+//   handleHoverMenuTabs(e, 0.5);
+// });
+// nav.addEventListener("mouseout", function (e) {
+//   handleHoverMenuTabs(e, 1);
+// });
+
+/* TOGGLE FUNCTION */
+const navToggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+const loginBtnClass = document.querySelector(".btn-login");
+navToggle.addEventListener("click", function () {
+  loginBtnClass.classList.toggle("ml-5");
+  links.classList.toggle("show-links");
 });

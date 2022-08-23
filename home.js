@@ -273,3 +273,12 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 /* REVEAL FUNCTION */
+
+// /* TOGGLE FUNCTION */
+// const navToggle = document.querySelector(".nav-toggle");
+// const links = document.querySelector(".links");
+// const loginBtnClass = document.querySelector(".btn-login");
+// navToggle.addEventListener("click", function () {
+//   loginBtnClass.classList.toggle("ml-5");
+//   links.classList.toggle("show-links");
+// });

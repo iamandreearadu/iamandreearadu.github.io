@@ -1,3 +1,7 @@
+.social-icons a {
+  color: whitesmoke;
+}
+
 .showprice-btn {
   margin-top: 1.8rem;
   border: 1px solid rgb(183, 183, 183);
@@ -15,7 +19,7 @@
   background-image: url("/Resources/background-food.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
 }
 .card {
   box-shadow: 0 15px 35px rgb(103, 103, 103, 60%);

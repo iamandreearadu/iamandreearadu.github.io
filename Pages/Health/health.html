@@ -51,8 +51,8 @@
   </head>
 
   <body>
-    <header class="bg-image-health">
-      <!--ANDREEA RADU TITLE PAGE-->
+    <div class="bg-image-health">
+      <!-- ANDREEA RADU TITLE PAGE
       <div
         class="page-header pt-2"
         style="
@@ -69,7 +69,7 @@
           OFFICIAL PERSONAL BLOG
         </h1>
       </div>
-      <!--ANDREEA RADU TITLE PAGE-->
+      ANDREEA RADU TITLE PAGE
       <nav class="navbar navbar-expand-lg navbar-container">
         <a class="navbar" href="/index.html">HOME</a>
         <button
@@ -161,8 +161,152 @@
             </li>
           </ul>
         </div>
+      </nav> -->
+
+      <nav>
+        <div class="nav-center">
+          <div class="nav-header">
+            <div>
+              <h3
+                style="
+                  font-family: Apple Chancery;
+                  color: whitesmoke;
+                  margin-bottom: 0;
+                  font-size: 1.5rem;
+                "
+              >
+                ANDREEA RADU
+              </h3>
+              <h1
+                style="text-align: center; font-size: 10px; color: whitesmoke"
+              >
+                OFFICIAL PERSONAL BLOG
+              </h1>
+            </div>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"> </i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Delights/delights.html"
+                >Delights</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="/Pages/Sport/sport.html"
+                id="navbarDropdown1"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Fitness
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/wod.html"
+                  >WOD</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+                  >Choose your program</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/Pages/Sport/FitnessHealth/challenges.html"
+                  >Challenges</a
+                >
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Health/health.html"> Health</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/TrackApp/trackapp.html"
+                >Tracker</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/Pages/Contact/contact.html">Contact</a>
+            </li>
+            <li class="" id="mySecNavLogin">
+              <a
+                class="nav-link btn-login ml-5"
+                href="/Pages/Auth/Login/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="mr-5" id="mySecNavRegister">
+              <a
+                class="nav-link btn-register"
+                href="/Pages/Auth/Register/register.html"
+                >Register</a
+              >
+            </li>
+            <li class="mr-2 d-none" id="mySecNavMyAccount">
+              <a
+                class="nav-link btn-myacc"
+                href="/Pages/MyAccount/myaccount.html"
+                >My account</a
+              >
+            </li>
+            <li class="mr-5 d-none" id="mySecNavLogout" onclick="logout()">
+              <a class="nav-link btn-logout" href="/">Logout</a>
+            </li>
+          </ul>
+          <!-- social media -->
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.facebook.com/r.deeea/">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/raduAndreeaa">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/raduandreeaa/?hl=ro">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/andreea-radu-1449b4153/">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/iamandreearadu">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
-    </header>
+
+      <p
+        class="d-block font-weight-bold text-white"
+        style="
+          text-align: center;
+          font-size: 3rem;
+          font-family: Apple Chancery;
+          font-style: italic;
+          color: rgb(229, 229, 229);
+        "
+      >
+        Body | Mind | Soul
+      </p>
+    </div>
 
     <main role="main">
       <!--      MAIN    -->
@@ -232,7 +376,7 @@
                   <h3>TIPS</h3>
                 </div>
                 <div class="body-widget-tips p-2">
-                  <h5>Drink your water</h5>
+                  <h5>Stay hydrated</h5>
                   <h5>Breath</h5>
                   <h5>Move</h5>
                   <h5>Be grateful everyday</h5>
@@ -240,29 +384,60 @@
               </div>
               <div class="card">
                 <div class="header">
-                  <h3>CHOOSE YOUR PROGRAM</h3>
+                  <h3>Q&A</h3>
                 </div>
-                <div class="body widget popular-post">
+                <div class="question">
                   <div class="row">
                     <div class="col-lg-12">
-                      <div class="single_post">
-                        <h4 class="m-b-0">FIRE PROGRAM</h4>
+                      <div class="question-title p-3">
+                        <h6 class="font-weight-bold">
+                          Why Should I Eat a High-Fiber Diet?
+                        </h6>
 
-                        <div class="img-post">
-                          <img
-                            src="https://via.placeholder.com/280x280/FFB6C1/000000"
-                            alt="Awesome Image"
-                          />
+                        <!--question text-->
+                        <div class="question-text">
+                          <h6>
+                            Dietary fiber from fruits, vegetables, whole grains
+                            and legumes can help maintain a healthy weight,
+                            lower blood cholesterol and glucose levels, help
+                            food pass through the digestive system, promote
+                            regularity and prevent constipation. Aim for at
+                            least 25 grams per day.
+                          </h6>
                         </div>
                       </div>
-                      <div class="single_post">
-                        <h4 class="m-b-0">STORM PROGRAM</h4>
+                      <div class="question-title p-2">
+                        <h6 class="font-weight-bold">
+                          How Can I Eat More Healthfully?
+                        </h6>
 
-                        <div class="img-post">
-                          <img
-                            src="https://via.placeholder.com/280x280/FFB6C1/000000"
-                            alt="Awesome Image"
-                          />
+                        <!--question text-->
+                        <div class="question-text">
+                          <h6>
+                            Fill up on nutrients the body needs—vitamins,
+                            minerals, complex carbs, lean protein, and healthy
+                            fats—by eating a varied diet of nutrient-dense foods
+                            like fruits, vegetables, whole grains, lean meats,
+                            eggs, beans, and nuts.
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="question-title p-3">
+                        <h6 class="font-weight-bold">What Are Healthy Fats?</h6>
+
+                        <!--question text-->
+                        <div class="question-text">
+                          <h6>
+                            Unsaturated fats, like monounsaturated and
+                            polyunsaturated, that can lower your risk for heart
+                            disease or stroke are considered good for you. For
+                            monounsaturated fats, think olive, canola, peanut,
+                            and sunflower oils, as well as avocados and most
+                            nuts. Polyunsaturated fats are in corn and soybean
+                            oils and in walnuts, sesame, pumpkin and flax seeds.
+                            Omega-3 fatty acids are a type of polyunsaturated
+                            fat in salmon, mackerel, tuna, and trout.
+                          </h6>
                         </div>
                       </div>
                     </div>
@@ -362,9 +537,9 @@
       <!--       MAIN         -->
     </main>
 
-    <footer class="bg-dark text-center text-white mt-3">
-      <div class="container p-4 pb-0">
-        <section class="mb-4">
+    <footer class="bg-dark text-center text-white">
+      <!-- <div class="container p-4 pb-0">
+        <div class="mb-4">
           <a
             class="btn btn-outline-light btn-floating m-1"
             href="https://www.facebook.com/r.deeea/"
@@ -404,13 +579,16 @@
           >
             <i class="fab fa-linkedin-in"></i>
           </a>
-        </section>
-      </div>
+        </div>
+      </div> -->
 
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
+      <div
+        class="copyright-section text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2022 Copyright:
         <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
+          >Radu Andreea | Front-End Developer</a
         >
       </div>
     </footer>

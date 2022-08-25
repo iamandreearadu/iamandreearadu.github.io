@@ -5,7 +5,8 @@
     "pictureWidth": "330px",
     "pictureHeight": "180px",
     "titleBtn": "DELIGHTS NEST ▼",
-    "message": "Heaven of flavours and colors."
+    "message": "Heaven of flavours and colors.",
+    "type": "section--1"
   },
 
   {
@@ -14,7 +15,8 @@
     "pictureWidth": "330px",
     "pictureHeight": "180px",
     "titleBtn": "FITNESS ▼",
-    "message": "Make it a lifestyle!"
+    "message": "Make it a lifestyle!",
+    "type": "section--2"
   },
   {
     "id": 3,
@@ -22,6 +24,7 @@
     "pictureWidth": "320px",
     "pictureHeight": "180px",
     "titleBtn": "HEALTH ▼",
-    "message": "Take care of your body!"
+    "message": "Take care of your body!",
+    "type": "section--3"
   }
 ]

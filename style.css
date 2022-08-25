@@ -148,7 +148,7 @@ h4 {
 }
 main {
   min-height: 100vh;
-  display: grid;
+
   place-items: center;
 }
 
@@ -179,9 +179,21 @@ nav {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
-.logo {
-  height: 40px;
+.nav-icon h3 {
+  font-family: Apple Chancery;
+  color: whitesmoke;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  width: 206.54px;
 }
+
+.nav-icon h4 {
+  text-align: center;
+  font-size: 7px;
+  color: whitesmoke;
+  letter-spacing: 5px;
+}
+
 .links a {
   color: whitesmoke;
   font-size: 1rem;
@@ -280,7 +292,7 @@ nav {
 }
  */
 
-.cookie-message {
+/* .cookie-message {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -289,7 +301,7 @@ nav {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
-}
+} */
 
 .sidebar:hover {
   opacity: 40%;
@@ -297,11 +309,16 @@ nav {
 
 .btn-scrolldown {
   cursor: pointer;
-  border-radius: 2px;
-  color: black;
-  font-style: italic;
-}
+  background-color: none;
+  letter-spacing: 3px;
 
+  font-family: inherit;
+  font-weight: 600;
+
+  transition: all 0.3s linear;
+  box-shadow: 0 15px 35px rgb(103, 103, 103, 40%);
+}
+/* 
 .btn-scrolldown--1 {
   background-color: rgb(250, 154, 215);
 }
@@ -316,7 +333,7 @@ nav {
 
 .btn-scrolldown--4 {
   background-color: #afbefd;
-}
+} */
 
 .btn-scrolldown:hover {
   opacity: 80%;
@@ -347,6 +364,110 @@ nav {
   opacity: 1;
 }
 
-/* REVEAL */
+/* SECTIONS FROM PRACTICE */
 
-/*NAVBAR /////////////////////////////////////////////////////////*/
+section {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(23, 23, 23);
+}
+/* SECTION #1 "SCROLL DONW TO DISCOVER OUR TOPICS"*/
+section:nth-child(1) {
+  /* color: #fafafa; */
+}
+/* SECTION #2 "TOPICS"*/
+section:nth-child(2) {
+  /* color: #ffffff; */
+  background: inherit;
+  background-image: url("/Resources/mountainbackgroundpink.jfif");
+  background-size: cover;
+  background-position: 100%;
+  height: 65vh;
+}
+
+/* SECTION #3 "CAPTION"*/
+section:nth-child(3) {
+  /* color: #ffffff; */
+  border-bottom: 2px solid #777778;
+}
+
+/* SECTION #4 "ABOUT US"*/
+section:nth-child(4) {
+  color: #777778;
+  background-size: cover;
+  background-position: 100%;
+}
+section .container {
+  margin: 100px;
+}
+section h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container {
+  display: flex;
+}
+section .text-container .text-box:nth-child(1) {
+  cursor: pointer;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("/Resources/chocolate.jpg");
+  background-position: 100%;
+  background-size: cover;
+}
+section .text-container .text-box:nth-child(2) {
+  cursor: pointer;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("/Resources/Sport/running.jpg");
+  background-position: 100%;
+  background-size: cover;
+}
+section .text-container .text-box:nth-child(3) {
+  cursor: pointer;
+  margin: 20px;
+  padding: 20px;
+  background-image: url("/Resources/Health/healthyfood.jpg");
+  background-position: 100%;
+  background-size: cover;
+}
+section .text-container .text-box h3 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a {
+  color: var(--clr-grey-2);
+  font-weight: 900;
+}
+.fixed-nav .nav-icon .nav-icon-text {
+  color: var(--clr-grey-2);
+}

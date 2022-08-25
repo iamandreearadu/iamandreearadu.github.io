@@ -89,3 +89,15 @@ navToggle.addEventListener("click", function () {
   loginBtnClass.classList.toggle("ml-5");
   links.classList.toggle("show-links");
 });
+
+/* FIXED NAVBAR */
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+  const navHeight = navbar.getBoundingClientRect().height;
+  if (scrollHeight > navHeight) {
+    navbar.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed-nav");
+  }
+});

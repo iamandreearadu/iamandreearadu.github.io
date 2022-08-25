@@ -66,7 +66,7 @@ const loadInterests = function (array) {
     }
 
     let contentInterest = `
-    <div class="col-lg-4 interest-area p-4">
+    <div class="col-lg-4 col-sm-12 interest-area p-4">
       <img
       class="img-interest "
       src="${interests.picture}"
@@ -76,8 +76,8 @@ const loadInterests = function (array) {
       />
       <h3 class=" pt-3 ">
       <a  onclick="myScrollDown()"
-          class="btn-scrolldown ${btnScrollDown} pl-3 pr-3"
-          role="button"
+          class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
+          role="button" alt="${interests.type}"
        > ${interests.titleBtn}
       </a>
       </h3>
@@ -121,7 +121,7 @@ const loadDescriptions = function (array) {
     let contentDescription = `
     <div class="row featurette reveal mt-5 pt-5" id="featurette">
         <div class="col-md-7 ${classText}">
-            <h2 class="featurette-heading mb-5" id="${description.id}">
+            <h2 class="featurette-heading mb-5" id=" ${description.id}">
               ${description.titleSection}
             </h2>
             <p class="lead">

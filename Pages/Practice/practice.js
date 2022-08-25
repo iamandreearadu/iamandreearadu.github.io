@@ -28,9 +28,8 @@ const loadInterests = function (array) {
         height="${interests.pictureHeight}"
         />
         <h3 class=" pt-3 ">
-        <a  onclick="myScrollDown()"
-            class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
-            role="button"
+        <a class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
+            role="button" alt="${interests.type}"
          > ${interests.titleBtn}
         </a>
         </h3>
@@ -39,35 +38,6 @@ const loadInterests = function (array) {
     interestsContainer.innerHTML += contentInterest;
   });
 };
-// const topicsContainer = document.getElementById("myAreasOfTopics");
-// var topicsArray = [];
-
-// const loadTopics = function (array) {
-//   topicsContainer.innerHTML = "";
-//   let btnScrollDownTopics = "";
-//   array.forEach((topic, idx) => {
-//     let topics = document.createElement("div");
-//     topics.classList = "topics-container";
-
-//     if (idx === 0) {
-//       btnScrollDownTopics = "btn-scrolldown--1";
-//     } else if (idx === 1) {
-//       btnScrollDownTopics = "btn-scrolldown--2";
-//     } else if (idx === 2) {
-//       btnScrollDownTopics = "btn-scrolldown--3";
-//     }
-
-//     let contentTopics = `
-//     <div class="text-box topics-container ${btnScrollDownTopics}">
-//       <h3>${topic.titleBtn}</h3>
-//           <p>
-//           ${topic.message}
-//           </p>
-//     </div>
-//  `;
-//     topicsContainer.innerHTML += contentTopics;
-//   });
-// };
 
 function interests() {
   $.getJSON("/JSONFILES/Index/interests.json", (interest) => {
@@ -77,19 +47,7 @@ function interests() {
   });
 }
 interests();
-
-// function topicsJsonFunction() {
-//   $.getJSON("/JSONFILES/Practice/practiceTopicsDelights.json", (topic) => {
-//     topic.forEach((int, i) => {
-//       topicsArray.push(int);
-//     });
-//   });
-// }
-// topicsJsonFunction();
-// loadTopics(topicsArray);
-
 loadInterests(interestsArray);
-
 /* Interests */
 
 /* Description Interests*/
@@ -150,27 +108,22 @@ loadDescriptions(descriptionArray);
 /* Description Interests */
 
 const btnScrollTo1 = document.querySelector(".btn-scrolldown--1");
-const section1 = document.querySelector("#section--1");
+const section1 = document.getElementById("section--1");
+const btnScrollDown = document.querySelectorAll(".btn-scrolldown");
 
 // Scrolling button 1
 
 btnScrollTo1.addEventListener("click", function (e) {
   const sec1Scroll = section1.getBoundingClientRect();
-  console.log(sec1Scroll);
-
-  console.log(e.target.getBoundingClientRect());
-
   window.scrollTo(
     sec1Scroll.left + window.pageXOffset,
     sec1Scroll.top + window.pageYOffset
   );
-
   window.scrollTo({
     left: sec1Scroll.left + window.pageXOffset,
     top: sec1Scroll.left + window.pageYOffset,
     behavior: "smooth",
   });
-
   section1.scrollIntoView({ behavior: "smooth" });
 });
 

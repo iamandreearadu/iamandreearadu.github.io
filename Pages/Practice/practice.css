@@ -179,9 +179,22 @@ nav {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
-.logo {
-  height: 40px;
+/*ICON 'Andreea Radu' NAVBAR PROPERTIES */
+.nav-icon h3 {
+  font-family: Apple Chancery;
+  color: whitesmoke;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  width: 206.54px;
 }
+
+.nav-icon h4 {
+  text-align: center;
+  font-size: 7px;
+  color: whitesmoke;
+  letter-spacing: 5px;
+}
+/*ICON 'Andreea Radu' NAVBAR PROPERTIES */
 .links a {
   color: whitesmoke;
   font-size: 1rem;
@@ -294,7 +307,6 @@ section {
 section:nth-child(1) {
   /* color: #fafafa; */
 }
-
 /* SECTION #2 "TOPICS"*/
 section:nth-child(2) {
   /* color: #ffffff; */
@@ -390,7 +402,7 @@ section .text-container .text-box h3 {
   letter-spacing: 3px;
   /* border: 1px solid #e9e9e9; */
   font-size: 22px;
-  font-family: "Roboto,sans serif";
+  font-family: inherit;
   font-weight: 600;
   /* box-shadow: 4px 2px #e9e9e9; */
   /* opacity: 0.5; */
@@ -412,3 +424,21 @@ section .text-container .text-box h3 {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
+/* FIXED NAVBAR PROPERTIES */
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a {
+  color: var(--clr-grey-2);
+  font-weight: 900;
+}
+.fixed-nav .nav-icon .nav-icon-text {
+  color: var(--clr-grey-2);
+}
+/* FIXED NAVBAR PROPERTIES */

@@ -1,6 +1,7 @@
 [
   {
     "id": "section--1",
+    "sectionScroll": "sec1Scroll",
     "titleSection": "Delights Nest, the heaven of flavours and colors",
     "description": "It is a family owned and operated business in Sibiu, Romania. We carefully select our ingredients for their freshness, flavour and natural value. Whether you are searching for, Delights Nest is sure to have something freshly baked to suits your mood or your desires. We offer a wide variety of delights, vegan or nonvegan, sweet or salty.",
     "picture": "/Resources/DelightsNest/raspberrylemon_cake2.jpeg",
@@ -10,6 +11,7 @@
 
   {
     "id": "section--2",
+    "sectionScroll": "sec2Scroll",
     "titleSection": "Fitness | Make it a lifestyle",
     "description": "It happend to became a vegeterian 5 years ago. My life became healthier and happier by following some simple steps day by day.",
     "picture": "/Resources/Sport/backgroundfitness.jpg",
@@ -18,6 +20,7 @@
   },
   {
     "id": "section--3",
+    "sectionScroll": "sec3Scroll",
     "titleSection": "Health | Take care of your body",
     "description": "It happend to became a vegeterian 5 years ago. My life became healthier and happier by following some simple steps day by day.",
     "picture": "/Resources/Health/backgroundhealth1.jpg",

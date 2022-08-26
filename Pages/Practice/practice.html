@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PRACTICE WEBSITE</title>
     <!-- START FONT AWESOME STYLES -->
     <link href="/Font-awesome/all.min.css" rel="stylesheet" />
@@ -37,7 +39,7 @@
     />
   </head>
   <body>
-    <div class="containers reveal">
+    <div class="main-container ">
       <div class="bg-image">
         <!--ANDREEA RADU TITLE PAGE
         <div
@@ -185,8 +187,35 @@
                     >Delights</a
                   >
                 </li>
-                <li class="nav-item dropdown">
-                  <a href="/Pages/Sport/sport.html"> Fitness </a>
+                <li class="nav-item dropdown ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/Pages/Sport/sport.html"
+                    id="navbarDropdown1"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Fitness
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a
+                      class="dropdown-item"
+                      href="/Pages/Sport/FitnessHealth/wod.html"
+                      >WOD</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="/Pages/Sport/FitnessHealth/chooseyourprogram.html"
+                      >Choose your program</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="/Pages/Sport/FitnessHealth/challenges.html"
+                      >Challenges</a
+                    >
+                  </div>
                 </li>
                 <li>
                   <a class="nav-link" href="/Pages/Health/health.html"> Health</a>

@@ -131,7 +131,7 @@ const loadCarousel = function (array) {
 };
 
 function carousel() {
-  $.getJSON("/JSONFILES/Health/carousel.json", (slider) => {
+  $.getJSON("/JSONFiles/Health/carousel.json", (slider) => {
     slider.forEach((slide, ind) => {
       carouselArray.push(slide);
     });
@@ -158,7 +158,7 @@ const loadInstagramPosts = function (array) {
 };
 
 function instagramPostJson() {
-  $.getJSON("/JSONFILES/Health/instagramposts.json", (posts) => {
+  $.getJSON("/JSONFiles/Health/instagramposts.json", (posts) => {
     posts.forEach((post, ind) => {
       instagramArray.push(post);
     });

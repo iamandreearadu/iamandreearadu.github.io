@@ -453,6 +453,17 @@ section .text-container .text-box h3 {
   section .text-container {
     flex-direction: column;
   }
+  .reveal {
+    position: none;
+    transform: none;
+    opacity: none;
+    transition: none;
+  }
+
+  .reveal.active {
+    transform: none;
+    opacity: none;
+  }
 }
 
 .fixed-nav {

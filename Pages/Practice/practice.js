@@ -19,7 +19,7 @@ const loadInterests = function (array) {
     }
 
     let contentInterest = `
-      <div class="col-lg-4 col-sm-12 interest-area p-4">
+      <div class="col-lg-4 col-md-4 col-sm-12 interest-area">
         <img
         class="img-interest "
         src="${interests.picture}"

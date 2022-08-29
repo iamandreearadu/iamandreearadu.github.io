@@ -14,7 +14,7 @@ function submitLogin() {
   if (isUserLoggedIn()) {
     alert("Deja este logat");
     // SA pui aici URL-ul tau principal
-    window.location.replace("http://127.0.0.1:5501");
+    window.location.replace("/index.html");
     return;
   }
 
@@ -23,7 +23,7 @@ function submitLogin() {
   } else {
     let isValidated = false;
 
-    $.getJSON("users.json", (users) => {
+    $.getJSON("/JSONFiles/Auth/users.json", (users) => {
       users.forEach((user) => {
         if (user.email === email && user.password === password) {
           isValidated = true;

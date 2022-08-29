@@ -108,16 +108,18 @@ const loadDelights = function (array) {
 
     // Construct card content
     const content = `
-      <div class="col-md-4 col-sm-12 p-3 ">
+      <div class="col-lg-4 col-md-6 col-sm-12 p-3 ">
         <div class="card" >
             <img class="card-img-top" src="${delight.photoUrl}" alt="${delight.title}" />
             <div class="card-body">
                 <h5 class="card-title">${delight.title} <img style="float:right;height:${delight.typeImgHeight};width:${delight.typeImgWidth}" src="${delight.typeImg}" /> </h5>
              
                 <h5 class="showprice-btn">${delight.price}</h5>
+                <div class="btns-cards">
                 <a  onclick="updateDelight(${delight.id}, '${btnSaveDel}')" class="btn btn-light btn-del">${btnSaveDel}</a>
-                <a class="btn btn-light btn-del ml-4">Add to cart</a>
-                <a class="btn btn-light btn-del" style="float:right">Review</a>
+                <a class="btn btn-light btn-del ">To cart</a>
+                <a class="btn btn-light btn-del" >Review</a>
+                </div>
           </div>
         </div>
       </div>

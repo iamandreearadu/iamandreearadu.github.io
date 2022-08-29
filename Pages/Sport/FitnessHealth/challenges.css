@@ -53,6 +53,7 @@ Countdown Timer
   background: var(--clr-grey-1);
   color: var(--clr-white);
   margin-right: 1rem;
+  box-shadow: 0 15px 15px rgba(60, 62, 74, 0.798);
   width: 5rem;
   height: 5rem;
   display: grid;

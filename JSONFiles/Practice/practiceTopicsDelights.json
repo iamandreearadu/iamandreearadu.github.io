@@ -2,8 +2,8 @@
   {
     "id": 1,
     "picture": "/Resources/DelightsNest/raspberrylemon_cake2.jpeg",
-    "pictureWidth": "140px",
-    "pictureHeight": "140px",
+    "pictureWidth": "400px",
+    "pictureHeight": "260px",
     "titleBtn": "Delights Nest ▼",
     "message": "Heaven of flavours and colors."
   },
@@ -11,16 +11,16 @@
   {
     "id": 2,
     "picture": "/Resources/Health/healthylifestyle.jpg",
-    "pictureWidth": "140px",
-    "pictureHeight": "140px",
+    "pictureWidth": "400px",
+    "pictureHeight": "260px",
     "titleBtn": "Fitness ▼",
     "message": "Make it a lifestyle!"
   },
   {
     "id": 3,
     "picture": "/Resources/Health/backgroundhealth1.jpg",
-    "pictureWidth": "140px",
-    "pictureHeight": "140px",
+    "pictureWidth": "400px",
+    "pictureHeight": "260px",
     "titleBtn": "Health ▼",
     "message": "Take care of your body!"
   }

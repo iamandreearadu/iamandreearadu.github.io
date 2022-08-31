@@ -17,23 +17,20 @@ const loadInterests = function (array) {
     } else if (idx === 2) {
       btnScrollDown = "btn-scrolldown--3";
     }
-
-    let contentInterest = `
-      <div class="col-lg-4 col-md-4 col-sm-12 interest-area">
-        <img
+    /*  <img
         class="img-interest "
         src="${interests.picture}"
-        alt="Generic placeholder image"
-        width="${interests.pictureWidth}"
-        height="${interests.pictureHeight}"
-        />
-        <h3 class=" pt-3 ">
-        <a class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
+        />*/
+    let contentInterest = `
+      <div class="interest-area" style=" background-image: url('${interests.picture}');">
+       
+        <h3>
+        <a class="btn-scrolldown nav-link ${btnScrollDown} "
             role="button" alt="${interests.type}"
          > ${interests.titleBtn}
         </a>
         </h3>
-       <p style="font-size:18px">${interests.message}</p>
+       <h3>${interests.message}</h3>
        </div>`;
     interestsContainer.innerHTML += contentInterest;
   });
@@ -71,7 +68,7 @@ const loadDescriptions = function (array) {
     }
 
     let contentDescription = `
-    <div class="row featurette reveal mt-5 pt-5" id="featurette">
+    <div class="row featurette mt-5 pt-5" id="featurette">
         <div class="col-md-7 ${classText}">
             <h2 class="featurette-heading mb-5" id="${description.id}">
               ${description.titleSection}

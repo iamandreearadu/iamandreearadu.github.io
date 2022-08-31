@@ -68,10 +68,10 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: white;
+  color: black;
   line-height: 1.5;
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
 }
 
 ul {
@@ -84,11 +84,9 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
 }
 h1 {
   font-size: 3rem;
@@ -114,7 +112,7 @@ h4 {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   h4 {
     font-size: 1rem;
@@ -212,8 +210,7 @@ nav {
 }
 
 .nav-icon h4 {
-  text-align: center;
-  font-size: 7px;
+  font-size: 6.6px;
   color: whitesmoke;
   letter-spacing: 5px;
 }
@@ -228,10 +225,11 @@ nav {
   transition: var(--transition);
 }
 .links a:hover {
-  background: rgb(231, 230, 230);
-  opacity: 0.7;
-  color: rgb(7, 7, 7);
-  padding-left: 1.5rem;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  color: rgb(169, 195, 234);
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
 }
 .social-icons {
   display: none;
@@ -276,19 +274,19 @@ nav {
   }
   .social-icons a {
     margin: 0 0.5rem;
-    color: #444;
+    color: whitesmoke;
     transition: var(--transition);
   }
   .social-icons a:hover {
-    color: var(--clr-primary-7);
+    color: var(--clr-black);
   }
 }
 
 .bg-image {
-  background-image: url("/Resources/backgroundimage.jpg");
+  background-image: url("https://source.unsplash.com/1600x900/?welcome");
   background-position: 100%;
   background-size: cover;
-  height: 80vh;
+  height: 70vh;
 }
 
 .dropdown-menu,
@@ -308,76 +306,73 @@ section {
   background-color: rgb(255, 255, 255);
   color: rgb(23, 23, 23);
 }
-/* SECTION #1 "SCROLL DONW TO DISCOVER OUR TOPICS"*/
-section:nth-child(1) {
-  /* color: #fafafa; */
-}
-/* SECTION #2 "TOPICS"*/
-section:nth-child(2) {
-  /* color: #ffffff; */
-
-  background-image: url("/Resources/mountainbackgroundpink.jfif");
-  background-size: cover;
-  background-position: 100%;
-  height: 65vh;
-}
-
-/* SECTION #3 "CAPTION"*/
-section:nth-child(3) {
-  /* color: #ffffff; */
-  border-bottom: 2px solid #777778;
-}
-
-/* SECTION #4 "ABOUT US"*/
-section:nth-child(4) {
-  color: #777778;
-  background-size: cover;
-  background-position: 100%;
-}
-section .container {
-  margin: 100px;
-}
-section h1 {
-  font-size: 3rem;
-  margin: 20px;
-}
-section h2 {
-  font-size: 40px;
+/* SECTION #1 "INTERESTS"*/
+.interests-section {
   text-align: center;
-  text-transform: uppercase;
+  height: 32rem;
 }
-section .text-container {
+
+.interest-container h3 {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  padding: 1.2rem;
+}
+
+.interest-container {
   display: flex;
+  flex-direction: row;
 }
-section .text-container .text-box:nth-child(1) {
+.interest-area {
+  margin: 0.5rem;
+  width: 23rem;
+  height: 12rem;
+  border-radius: 15px;
+  box-shadow: 2px 5px 4px rgba(142, 136, 136, 0.432);
+}
+
+.btn-scrolldown {
+  font-size: 1.8rem;
   cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/chocolate.jpg");
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: all 0.2s linear;
+}
+.btn-scrolldown:hover {
+  opacity: 0.6;
+  font-size: 31px;
+  transition: 0.2s;
+}
+
+/* SECTION #2 "BETWEEN"*/
+.between-section {
+  color: rgba(255, 255, 255, 0.732);
+  letter-spacing: 5px;
+  background-image: url("https://source.unsplash.com/1600x900/?love");
   background-position: 100%;
   background-size: cover;
-}
-section .text-container .text-box:nth-child(2) {
-  cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/Sport/running.jpg");
-  background-position: 100%;
-  background-size: cover;
-}
-section .text-container .text-box:nth-child(3) {
-  cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/Health/healthyfood.jpg");
-  background-position: 100%;
-  background-size: cover;
-}
-section .text-container .text-box h3 {
-  font-size: 30px;
+  height: 65vh;
+  font-size: 7rem;
   text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+}
+
+/* SECTION #3 "DESCRIPTION SECTION"*/
+.description-section {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.description-section div h2 {
+  font-family: var(--ff-secondary);
+  text-align: center;
+  font-size: 3rem;
+}
+.description-section .featurette {
+  font-family: var(--ff-secondary);
+}
+
+section .text-container {
+  color: rgb(0, 0, 0);
+  font-family: var(--ff-secondary);
+  font-size: 3rem;
 }
 
 @media (max-width: 900px) {
@@ -387,6 +382,13 @@ section .text-container .text-box h3 {
   }
   section .text-container {
     flex-direction: column;
+  }
+  .interests-section {
+    height: 130vh;
+  }
+  .interest-section .interest-container {
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -401,21 +403,7 @@ section .text-container .text-box h3 {
   transform: translateY(0);
   opacity: 1;
 }
-.btn-scrolldown {
-  cursor: pointer;
-  background-color: none;
-  letter-spacing: 3px;
-  /* border: 1px solid #e9e9e9; */
-  font-size: 22px;
-  font-family: inherit;
-  font-weight: 600;
-  /* box-shadow: 4px 2px #e9e9e9; */
-  /* opacity: 0.5; */
-  transition: all 0.3s linear;
-}
-.btn-scrolldown:hover {
-  opacity: 0.8;
-}
+
 /*NAVBAR /////////////////////////////////////////////////////////*/
 .nav-toggle {
   font-size: 1.5rem;
@@ -451,7 +439,3 @@ section .text-container .text-box h3 {
 }
 
 /* FIXED NAVBAR PROPERTIES */
-
-.interest-area {
-  min-width: 347px;
-}

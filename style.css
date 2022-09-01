@@ -68,10 +68,10 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: white;
+  color: black;
   line-height: 1.5;
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
 }
 
 ul {
@@ -84,11 +84,9 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
 }
 h1 {
   font-size: 3rem;
@@ -114,7 +112,7 @@ h4 {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   h4 {
     font-size: 1rem;
@@ -127,6 +125,17 @@ h4 {
   h3,
   h4 {
     line-height: 1;
+  }
+  .reveal {
+    position: none;
+    transform: none;
+    opacity: none;
+    transition: none;
+  }
+
+  .reveal.active {
+    transform: none;
+    opacity: none;
   }
 }
 /*  global classes */
@@ -143,11 +152,23 @@ h4 {
 }
 @media screen and (min-width: 992px) {
   .section-center {
-    width: 95vw;
+    width: 5vw;
+  }
+  .reveal {
+    position: none;
+    transform: none;
+    opacity: none;
+    transition: none;
+  }
+
+  .reveal.active {
+    transform: none;
+    opacity: none;
   }
 }
 main {
   min-height: 100vh;
+  display: grid;
   place-items: center;
 }
 
@@ -175,10 +196,11 @@ nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  /* color: var(--clr-primary-10); */
+  /* color: var(--clr-primary-1); */
   font-size: 1.7rem;
   transform: rotate(90deg);
 }
+/*ICON 'Andreea Radu' NAVBAR PROPERTIES */
 .nav-icon h3 {
   font-family: Apple Chancery;
   color: whitesmoke;
@@ -188,12 +210,11 @@ nav {
 }
 
 .nav-icon h4 {
-  text-align: center;
-  font-size: 7px;
+  font-size: 6.6px;
   color: whitesmoke;
   letter-spacing: 5px;
 }
-
+/*ICON 'Andreea Radu' NAVBAR PROPERTIES */
 .links a {
   color: whitesmoke;
   font-size: 1rem;
@@ -204,15 +225,15 @@ nav {
   transition: var(--transition);
 }
 .links a:hover {
-  background: rgb(231, 230, 230);
-  opacity: 0.7;
-  color: rgb(7, 7, 7);
-  padding-left: 1.5rem;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  color: rgb(169, 195, 234);
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
 }
 .social-icons {
   display: none;
 }
-
 .links {
   height: 0;
   overflow: hidden;
@@ -253,104 +274,133 @@ nav {
   }
   .social-icons a {
     margin: 0 0.5rem;
-    color: #444;
+    color: whitesmoke;
     transition: var(--transition);
   }
   .social-icons a:hover {
-    color: var(--clr-primary-7);
+    font-size: 1.1rem;
+    color: rgb(169, 195, 234);
+    transition: 0.2s ease-in-out;
   }
 }
 
 .bg-image {
-  background-image: url("/Resources/backgroundimage.jpg");
+  background-image: url("https://source.unsplash.com/1600x900/?welcome");
   background-position: 100%;
   background-size: cover;
-  height: 80vh;
+  height: 70vh;
 }
 
 .dropdown-menu,
 .dropdown-item {
-  background: rgb(98, 98, 98);
-  border: none;
+  background: rgba(0, 0, 0, 0.432);
+
+  width: 15rem;
+}
+.dropdown-item:hover {
+  color: rgb(220, 220, 220);
+  background: none;
 }
 
-/* .nav-link,
-.navbar {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  font-family: "Arial Black";
-}
-
-.nav-link,
-.navbar-item,
-.navbar:hover {
-  text-decoration: none;
-  color: rgb(219, 219, 219);
-  font-size: 16px;
-}
- */
-
-/* .cookie-message {
+section {
+  min-height: 30vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  background-color: white;
-  color: #bbb;
-  font-size: 1.5rem;
-  font-weight: 400;
-} */
+  background-color: rgb(255, 255, 255);
+  color: rgb(23, 23, 23);
+}
+/* SECTION #1 "INTERESTS"*/
+.interests-section {
+  text-align: center;
+  height: 32rem;
+}
 
-.sidebar:hover {
-  opacity: 40%;
+.interest-container h3 {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  padding: 1.2rem;
+}
+
+.interest-container {
+  display: flex;
+  flex-direction: row;
+}
+.interest-area {
+  margin: 0.5rem;
+  width: 23rem;
+  height: 12rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(88, 88, 88, 0.8);
 }
 
 .btn-scrolldown {
+  font-size: 1.8rem;
   cursor: pointer;
-  background-color: none;
-  letter-spacing: 3px;
-
-  font-family: inherit;
+  letter-spacing: 2px;
   font-weight: 600;
-
-  transition: all 0.3s linear;
-  box-shadow: 0 15px 35px rgb(103, 103, 103, 40%);
+  transition: all 0.2s linear;
 }
-/* 
-.btn-scrolldown--1 {
-  background-color: rgb(250, 154, 215);
-}
-
-.btn-scrolldown--2 {
-  background-color: #c3c2c2;
-}
-
-.btn-scrolldown--3 {
-  background-color: #f7cea7;
-}
-
-.btn-scrolldown--4 {
-  background-color: #afbefd;
-} */
-
 .btn-scrolldown:hover {
-  opacity: 80%;
+  opacity: 0.6;
+  font-size: 31px;
+  transition: 0.2s;
 }
 
-.carousel-title {
-  font-weight: 600;
+/* SECTION #2 "BETWEEN"*/
+.between-section {
+  color: rgba(255, 255, 255, 0.732);
+  letter-spacing: 5px;
+  background-image: url("https://source.unsplash.com/1600x900/?love");
+  background-position: 100%;
+  background-size: cover;
+  height: 65vh;
+  font-size: 7rem;
+  text-align: center;
 }
 
-.description-over-img {
-  position: absolute;
+/* SECTION #3 "DESCRIPTION SECTION"*/
+.description-section {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.description-section div h2 {
+  font-family: var(--ff-secondary);
+  text-align: center;
   font-size: 3rem;
-  font-family: Ubuntu;
-  font-style: italic;
-  color: rgb(229, 229, 229);
+}
+.description-section .featurette {
+  font-family: var(--ff-secondary);
+  align-items: center;
+  padding: 0rem 3rem 3rem 3rem;
+}
+.featurette-image {
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(88, 88, 88, 0.8);
 }
 
-/* REVEAL */
+section .text-container {
+  color: rgb(0, 0, 0);
+  font-family: var(--ff-secondary);
+  font-size: 3rem;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+  .interests-section {
+    height: 110vh;
+  }
+  .interest-section .text-container .interest-container {
+    justify-content: center;
+  }
+}
+
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -363,108 +413,20 @@ nav {
   opacity: 1;
 }
 
-/* SECTIONS FROM PRACTICE */
-
-section {
-  min-height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  color: rgb(23, 23, 23);
-}
-/* SECTION #1 "SCROLL DONW TO DISCOVER OUR TOPICS"*/
-section:nth-child(1) {
-  /* color: #fafafa; */
-}
-/* SECTION #2 "TOPICS"*/
-section:nth-child(2) {
-  /* color: #ffffff; */
-  background: inherit;
-  background-image: url("/Resources/mountainbackgroundpink.jfif");
-  background-size: cover;
-  background-position: 100%;
-  height: 65vh;
-}
-
-/* SECTION #3 "CAPTION"*/
-section:nth-child(3) {
-  /* color: #ffffff; */
-  border-bottom: 2px solid #777778;
-}
-
-/* SECTION #4 "ABOUT US"*/
-section:nth-child(4) {
-  color: #777778;
-  background-size: cover;
-  background-position: 100%;
-}
-section .container {
-  margin: 100px;
-}
-section h1 {
-  font-size: 3rem;
-  margin: 20px;
-}
-section h2 {
-  font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
-}
-section .text-container {
-  display: flex;
-}
-section .text-container .text-box:nth-child(1) {
+/*NAVBAR /////////////////////////////////////////////////////////*/
+.nav-toggle {
+  font-size: 1.5rem;
+  color: rgb(201, 201, 201);
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
   cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/chocolate.jpg");
-  background-position: 100%;
-  background-size: cover;
 }
-section .text-container .text-box:nth-child(2) {
-  cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/Sport/running.jpg");
-  background-position: 100%;
-  background-size: cover;
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
 }
-section .text-container .text-box:nth-child(3) {
-  cursor: pointer;
-  margin: 20px;
-  padding: 20px;
-  background-image: url("/Resources/Health/healthyfood.jpg");
-  background-position: 100%;
-  background-size: cover;
-}
-section .text-container .text-box h3 {
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 900px) {
-  section h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  section .text-container {
-    flex-direction: column;
-  }
-  .reveal {
-    position: none;
-    transform: none;
-    opacity: none;
-    transition: none;
-  }
-
-  .reveal.active {
-    transform: none;
-    opacity: none;
-  }
-}
+/* FIXED NAVBAR PROPERTIES */
 
 .fixed-nav {
   position: fixed;
@@ -472,14 +434,7 @@ section .text-container .text-box h3 {
   left: 0;
   width: 100%;
   box-shadow: var(--light-shadow);
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.fixed-nav .links a {
-  color: var(--clr-grey-2);
-}
-.fixed-nav .links a:hover {
-  color: var(--clr-grey-5);
-}
-.fixed-nav .nav-icon .nav-icon-text {
-  color: var(--clr-grey-2);
-}
+/* FIXED NAVBAR PROPERTIES */

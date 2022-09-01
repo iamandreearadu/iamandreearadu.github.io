@@ -6,7 +6,7 @@ body {
   background-image: url("/Resources/Health/backgroundhealth21.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 90vh;
+  height: 70vh;
 }
 .card {
   background: #fff;
@@ -48,21 +48,16 @@ body {
   position: relative;
   box-shadow: none;
 }
-.main-post {
-  background-image: url("/Resources/Health/healthylifestyle.jpg");
+.card .main-post {
+  background-image: url("https://source.unsplash.com/1100x400/?health");
   background-position: 100%;
   background-size: cover;
   color: rgb(255, 255, 255);
   padding: 2rem;
   height: 24rem;
   box-shadow: 0 2px 30px 0 rgba(121, 121, 121, 40%);
-  border-radius: 2px;
+  border-radius: 3px;
 }
-
-/* .img-fluid {
-  height: 25rem;
-  width: 55rem;
-} */
 
 .single_post {
   -webkit-transition: all 0.4s ease;
@@ -355,43 +350,17 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-/* 
-.title {
-  margin-top: 15vh;
-  margin-bottom: 4rem;
-}
-.title h2 {
-  color: var(--clr-gold);
-  font-family: "Great Vibes", cursive;
-  text-align: center;
-}
-.section-center {
-  max-width: var(--fixed-width);
-}
-.question {
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  margin-bottom: 2rem;
-}
-.question-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: capitalize;
-  padding-bottom: 1rem;
-}
-.question-title p {
-  margin-bottom: 0;
-  letter-spacing: var(--spacing);
-  color: var(--clr-grey-1);
+
+.btn-carousel {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.236);
 }
 
-.question-text {
-  padding: 1rem 0 1.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+.btn-carousel:hover {
+  color: white;
+  font-size: 1.6rem;
+  transition: 0.1s ease-in-out;
 }
-.question-text p {
-  margin-bottom: 0;
-} */

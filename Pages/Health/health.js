@@ -60,22 +60,7 @@ const loadHealthPosts = function (array) {
     postsContainer.innerHTML += content;
   });
 };
-/* after ${class.TEXT} | first style /////////
- <button class="btn btn-light m-2" style="float: right">
-          Continue Reading
-        </button>
-        */
-/* before last div | first style //////////
-   <div class="col-md-5 ${post.classImg}">
-        <img
-          class="featurette-image img-fluid mx-auto "
-          src="${post.photoUrl}"
-          alt="50x50"
-          style="width: ${post.typeImgWidth}; height: ${post.typeImgHeight}"
-          data-holder-rendered="true"
-        />
-      </div>
-      */
+
 function healthPostJson() {
   $.getJSON("/JSONFiles/Health/healthPost.json", (posts) => {
     posts.forEach((post, ind) => {
@@ -107,20 +92,20 @@ const loadCarousel = function (array) {
 
     let textPositionClass = "";
     if (idx === 0 || idx === 2) {
-      textPositionClass = "text-right text-dark";
+      textPositionClass = "text-right ";
     } else {
       textPositionClass = "text-left";
     }
 
     let contentCarousel = `
-        <div class="carousel-item ${activeClass}" style="background-image: url(${slide.picture});background-position: 100%;background-size: cover;" >
+        <div class="carousel-item ${activeClass}" style="background-image: url(${slide.picture}) ;background-position: 100%;background-size: cover;" >
 
             <div class="container">
                 <div class="carousel-caption ${textPositionClass}">
                     <h1 style="font-weight: 600;">${slide.title} </h1>
                     <h5 style="font-weight: 600; font-size:22px">${slide.subtitle}</h5>
                   
-                    <p><a class="btn btn-lg btn-light" href="${slide.href}" role="button">${slide.btn}</a></p>
+                    <p><a class="btn btn-carousel" href="${slide.href}" role="button">${slide.btn}</a></p>
                 </div>
             </div>
         </div>

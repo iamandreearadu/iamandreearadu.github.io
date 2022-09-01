@@ -278,7 +278,9 @@ nav {
     transition: var(--transition);
   }
   .social-icons a:hover {
-    color: var(--clr-black);
+    font-size: 1.1rem;
+    color: rgb(169, 195, 234);
+    transition: 0.2s ease-in-out;
   }
 }
 
@@ -291,11 +293,13 @@ nav {
 
 .dropdown-menu,
 .dropdown-item {
-  background: rgb(98, 98, 98);
-  border: none;
+  background: rgba(0, 0, 0, 0.432);
+
+  width: 15rem;
 }
 .dropdown-item:hover {
   color: rgb(220, 220, 220);
+  background: none;
 }
 
 section {
@@ -327,7 +331,7 @@ section {
   width: 23rem;
   height: 12rem;
   border-radius: 15px;
-  box-shadow: 2px 5px 4px rgba(142, 136, 136, 0.432);
+  box-shadow: 0 15px 35px rgba(88, 88, 88, 0.8);
 }
 
 .btn-scrolldown {
@@ -367,6 +371,12 @@ section {
 }
 .description-section .featurette {
   font-family: var(--ff-secondary);
+  align-items: center;
+  padding: 0rem 3rem 3rem 3rem;
+}
+.featurette-image {
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(88, 88, 88, 0.8);
 }
 
 section .text-container {
@@ -384,11 +394,10 @@ section .text-container {
     flex-direction: column;
   }
   .interests-section {
-    height: 130vh;
+    height: 110vh;
   }
-  .interest-section .interest-container {
+  .interest-section .text-container .interest-container {
     justify-content: center;
-    align-items: center;
   }
 }
 
@@ -425,17 +434,7 @@ section .text-container {
   left: 0;
   width: 100%;
   box-shadow: var(--light-shadow);
-}
-
-.fixed-nav .links a {
-  color: var(--clr-grey-2);
-}
-.fixed-nav .links a:hover {
-  color: var(--clr-grey-5);
-}
-
-.fixed-nav .nav-icon .nav-icon-text {
-  color: var(--clr-grey-2);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* FIXED NAVBAR PROPERTIES */

@@ -24,7 +24,7 @@
   background-image: url("/Resources/background-food.jpg");
   background-position: 100%;
   background-size: cover;
-  height: 80vh;
+  height: 70vh;
 }
 .card {
   justify-content: space-between;

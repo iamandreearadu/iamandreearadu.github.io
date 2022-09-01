@@ -1,50 +1,5 @@
-/* SLIDER 
-var carouselArray = [];
-
-const loadCarousel = function (array) {
-  carouselContainer.innerHTML = "";
-  let activeClass = "";
-
-  array.forEach((slide, idx) => {
-    let carusel = document.createElement("div");
-    carusel.classList = "carousel-item";
-
-    if (idx < 1) {
-      activeClass = "active";
-    } else {
-      activeClass = "";
-    }
-
-    let contentCarousel = `
-        <div class="carousel-item ${activeClass}" style="height:600px;">
-            <img class="first-slide center h-${slide.pictureHeight} w-${slide.pictureWidth}"  src="${slide.picture}">
-            <div class="container">
-                <div class="carousel-caption text-left">
-                    <h1 class="carousel-title">${slide.title} </h1>
-                    <p class="carousel-subtitle">${slide.subtitle}</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">>${slide.btn}</a></p>
-                </div>
-            </div>
-        </div>
-    `;
-
-    carouselContainer.innerHTML += contentCarousel;
-  });
-};
-
-function carousel() {
-  $.getJSON("/JSONFILES/Index/carousel.json", (slider) => {
-    slider.forEach((slide, ind) => {
-      carouselArray.push(slide);
-    });
-  });
-}
-carousel();
-loadCarousel(carouselArray);
-
- SLIDER */
-
 /* Interests */
+
 var interestsArray = [];
 
 const loadInterests = function (array) {
@@ -61,28 +16,22 @@ const loadInterests = function (array) {
       btnScrollDown = "btn-scrolldown--2";
     } else if (idx === 2) {
       btnScrollDown = "btn-scrolldown--3";
-    } else if (idx === 3) {
-      btnScrollDown = "btn-scrolldown--4";
     }
-
+    /*  <img
+        class="img-interest "
+        src="${interests.picture}"
+        />*/
     let contentInterest = `
-    <div class="col-lg-4 col-sm-12 interest-area p-4">
-      <img
-      class="img-interest "
-      src="${interests.picture}"
-      alt="Generic placeholder image"
-      width="${interests.pictureWidth}"
-      height="${interests.pictureHeight}"
-      />
-      <h3 class=" pt-3 ">
-      <a  onclick="myScrollDown()"
-          class="btn-scrolldown nav-link ${btnScrollDown} pl-3 pr-3"
-          role="button" alt="${interests.type}"
-       > ${interests.titleBtn}
-      </a>
-      </h3>
-     <p>${interests.message}</p>
-     </div>`;
+      <div class="interest-area" style=" background-image: url('${interests.picture}');">
+       
+        <h3>
+        <a class="btn-scrolldown nav-link ${btnScrollDown} "
+            role="button" alt="${interests.type}"
+         > ${interests.titleBtn}
+        </a>
+        </h3>
+       <h3>${interests.message}</h3>
+       </div>`;
     interestsContainer.innerHTML += contentInterest;
   });
 };
@@ -119,9 +68,9 @@ const loadDescriptions = function (array) {
     }
 
     let contentDescription = `
-    <div class="row featurette reveal mt-5 pt-5" id="featurette">
+    <div class="row featurette mt-5 pt-5" id="featurette">
         <div class="col-md-7 ${classText}">
-            <h2 class="featurette-heading mb-5" id=" ${description.id}">
+            <h2 class="featurette-heading mb-5" id="${description.id}">
               ${description.titleSection}
             </h2>
             <p class="lead">
@@ -156,27 +105,22 @@ loadDescriptions(descriptionArray);
 /* Description Interests */
 
 const btnScrollTo1 = document.querySelector(".btn-scrolldown--1");
-const section1 = document.querySelector("#section--1");
+const section1 = document.getElementById("section--1");
+const btnScrollDown = document.querySelectorAll(".btn-scrolldown");
 
 // Scrolling button 1
 
 btnScrollTo1.addEventListener("click", function (e) {
   const sec1Scroll = section1.getBoundingClientRect();
-  console.log(sec1Scroll);
-
-  console.log(e.target.getBoundingClientRect());
-
   window.scrollTo(
     sec1Scroll.left + window.pageXOffset,
     sec1Scroll.top + window.pageYOffset
   );
-
   window.scrollTo({
     left: sec1Scroll.left + window.pageXOffset,
     top: sec1Scroll.left + window.pageYOffset,
     behavior: "smooth",
   });
-
   section1.scrollIntoView({ behavior: "smooth" });
 });
 
@@ -186,9 +130,6 @@ const section2 = document.querySelector("#section--2");
 // Scrolling button 2
 btnScrollTo2.addEventListener("click", function (e) {
   const sec2Scroll = section2.getBoundingClientRect();
-  // console.log(sec2Scroll);
-
-  // console.log(e.target.getBoundingClientRect());
 
   window.scrollTo(
     sec2Scroll.left + window.pageXOffset,
@@ -228,33 +169,8 @@ btnScrollTo3.addEventListener("click", function (e) {
   section3.scrollIntoView({ behavior: "smooth" });
 });
 
-const btnScrollTo4 = document.querySelector(".btn-scrolldown--4");
-const section4 = document.querySelector("#section--4");
-/*
-// Scrolling button 4
-btnScrollTo4.addEventListener("click", function (e) {
-  const sec4Scroll = section4.getBoundingClientRect();
-  //console.log(sec4Scroll);
-
-  console.log(e.target.getBoundingClientRect());
-
-  window.scrollTo(
-    sec4Scroll.left + window.pageXOffset,
-    sec4Scroll.top + window.pageYOffset
-  );
-
-  window.scrollTo({
-    left: sec4Scroll.left + window.pageXOffset,
-    top: sec4Scroll.left + window.pageYOffset,
-    behavior: "smooth",
-  });
-
-  section4.scrollIntoView({ behavior: "smooth" });
-});
-*/
 displayUserMenu(isUserLoggedIn());
 
-/* REVEAL FUNCTION */
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -272,13 +188,3 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-/* REVEAL FUNCTION */
-
-// /* TOGGLE FUNCTION */
-// const navToggle = document.querySelector(".nav-toggle");
-// const links = document.querySelector(".links");
-// const loginBtnClass = document.querySelector(".btn-login");
-// navToggle.addEventListener("click", function () {
-//   loginBtnClass.classList.toggle("ml-5");
-//   links.classList.toggle("show-links");
-// });

@@ -77,7 +77,7 @@ const loadDescriptions = function (array) {
               ${description.description}
             </p>
         </div>
-        <div class="col-md-5 ${classImg}">
+        <div class="${classImg}">
             <img
               class="featurette-image img-fluid mx-auto"
               src="${description.picture}"
@@ -130,9 +130,6 @@ const section2 = document.querySelector("#section--2");
 // Scrolling button 2
 btnScrollTo2.addEventListener("click", function (e) {
   const sec2Scroll = section2.getBoundingClientRect();
-  // console.log(sec2Scroll);
-
-  // console.log(e.target.getBoundingClientRect());
 
   window.scrollTo(
     sec2Scroll.left + window.pageXOffset,
@@ -172,30 +169,6 @@ btnScrollTo3.addEventListener("click", function (e) {
   section3.scrollIntoView({ behavior: "smooth" });
 });
 
-const btnScrollTo4 = document.querySelector(".btn-scrolldown--4");
-const section4 = document.querySelector("#section--4");
-/*
-// Scrolling button 4
-btnScrollTo4.addEventListener("click", function (e) {
-  const sec4Scroll = section4.getBoundingClientRect();
-  //console.log(sec4Scroll);
-
-  console.log(e.target.getBoundingClientRect());
-
-  window.scrollTo(
-    sec4Scroll.left + window.pageXOffset,
-    sec4Scroll.top + window.pageYOffset
-  );
-
-  window.scrollTo({
-    left: sec4Scroll.left + window.pageXOffset,
-    top: sec4Scroll.left + window.pageYOffset,
-    behavior: "smooth",
-  });
-
-  section4.scrollIntoView({ behavior: "smooth" });
-});
-*/
 displayUserMenu(isUserLoggedIn());
 
 function reveal() {
@@ -215,11 +188,3 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-
-// const navToggle = document.querySelector(".nav-toggle");
-// const links = document.querySelector(".links");
-// const loginBtnClass = document.querySelector(".btn-login");
-// navToggle.addEventListener("click", function () {
-//   loginBtnClass.classList.toggle("ml-5");
-//   links.classList.toggle("show-links");
-// });

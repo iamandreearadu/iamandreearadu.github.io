@@ -70,7 +70,7 @@ const loadWods = function (arrayWod) {
 };
 
 function wodList() {
-  $.getJSON("/JSONFILES/Wod/wodList.json", (wods) => {
+  $.getJSON("/JSONFiles/Wod/wodList.json", (wods) => {
     wods.forEach((wod, i) => {
       arrayWod.push(wod);
     });

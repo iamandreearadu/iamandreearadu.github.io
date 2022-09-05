@@ -390,15 +390,18 @@ section .text-container {
     font-size: 2rem;
     text-align: center;
   }
-  section .text-container {
+  /* section .text-container {
     flex-direction: column;
-  }
+
+  } */
   .interests-section {
-    height: 110vh;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .interest-section .text-container .interest-container {
+  /* .interest-section .text-container .interest-container {
     justify-content: center;
-  }
+    align-items: center;
+  } */
 }
 
 .reveal {

@@ -37,7 +37,7 @@ const loadInterests = function (array) {
 };
 
 function interests() {
-  $.getJSON("/JSONFILES/Index/interests.json", (interest) => {
+  $.getJSON("/JSONFiles/Index/interests.json", (interest) => {
     interest.forEach((int, i) => {
       interestsArray.push(int);
     });
@@ -94,7 +94,7 @@ const loadDescriptions = function (array) {
 };
 
 function description() {
-  $.getJSON("/JSONFILES/Index/descriptions.json", (descriptions) => {
+  $.getJSON("/JSONFiles/Index/descriptions.json", (descriptions) => {
     descriptions.forEach((description, i) => {
       descriptionArray.push(description);
     });

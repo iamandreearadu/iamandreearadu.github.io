@@ -181,6 +181,7 @@ nav {
   background: transparent;
   box-shadow: var(--light-shadow);
 }
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -390,15 +391,18 @@ section .text-container {
     font-size: 2rem;
     text-align: center;
   }
-  section .text-container {
+  /* section .text-container {
     flex-direction: column;
-  }
+
+  } */
   .interests-section {
-    height: 110vh;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .interest-section .text-container .interest-container {
+  /* .interest-section .text-container .interest-container {
     justify-content: center;
-  }
+    align-items: center;
+  } */
 }
 
 .reveal {
@@ -435,6 +439,10 @@ section .text-container {
   width: 100%;
   box-shadow: var(--light-shadow);
   background: rgba(0, 0, 0, 0.4);
+
+  left: 0px;
+  top: 0px;
+  z-index: 1;
 }
 
 /* FIXED NAVBAR PROPERTIES */

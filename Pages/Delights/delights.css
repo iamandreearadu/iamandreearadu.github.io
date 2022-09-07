@@ -24,7 +24,17 @@
   background-image: url("/Resources/background-food.jpg");
   background-position: 100%;
   background-size: cover;
+  width: 100%;
   height: 70vh;
+}
+
+.container-delights {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-delights-container {
+  padding: 2rem;
 }
 .card {
   justify-content: space-between;
@@ -32,27 +42,19 @@
   width: 100%;
   min-width: 290px;
 }
-/* .bg-image-delights::after {
-  content: "Delights Nest, the heaven of flavours and colors";
-  font-style: italic;
-  display: flow-root;
-  margin-top: 20rem;
-  position: relative;
-  margin-left: 6rem;
-  color: aliceblue;
-  font-weight: bold;
-  font-size: 40px;
-} */
 
 .filters-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 12rem;
+  margin-bottom: 1rem;
 }
 
 .input-group .custom-select {
   width: 20rem;
   margin-bottom: 5px;
+  color: rgba(84, 84, 84, 0.992);
 }
 
 .navbar .fixed-nav {
@@ -60,4 +62,25 @@
 }
 .fixed-nav {
   position: fixed;
+}
+
+@media (max-width: 700px) {
+  .card-delights-container {
+    padding: 1rem;
+  }
+  .card {
+    width: 350px;
+    height: 500px;
+  }
+  .filters-container {
+    display: grid;
+    justify-content: center;
+    gap: 0;
+  }
+}
+@media (max-width: 991.5px) {
+  .card {
+    width: 450px;
+    height: 600px;
+  }
 }

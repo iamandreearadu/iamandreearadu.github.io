@@ -3,36 +3,30 @@
     "id": "section--1",
     "sectionName": "FIRE | PROGRAM",
     "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
-    "picture": "/Resources/Sport/backgroundfitness.jpg",
-    "pictureWidth": "350px",
-    "pictureHeight": "350px",
-    "pictureBackround": "/Resources/Sport/fires.jpg"
+    "picture": "https://source.unsplash.com/1600x900/?fire",
+    "color": "rgba(255, 0, 0, 0.138)"
   },
 
   {
     "id": "section--2",
     "sectionName": "STORM | PROGRAM",
     "description": "This might be the best choice for you if you are a beginner and have no idea which is the good path for your desires",
-    "picture": "/Resources/Sport/backgroundfitness.jpg",
-    "pictureWidth": "350px",
-    "pictureHeight": "350px",
-    "pictureBackround": "/Resources/Sport/storm.jpg"
+    "picture": "https://source.unsplash.com/1600x900/?storm",
+    "color": "rgba(62, 59, 59, 0.138)"
   },
 
   {
     "id": "section--3",
     "sectionName": "THUNDER | PROGRAM",
     "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
-    "picture": "/Resources/Sport/backgroundfitness.jpg",
-    "pictureWidth": "350px",
-    "pictureHeight": "350px"
+    "picture": "https://source.unsplash.com/1600x900/?thunder",
+    "color": "rgba(83, 221, 219, 0.138)"
   },
   {
     "id": "section--3",
     "sectionName": "WHIRLDWIND | PROGRAM",
     "description": "This is the perfect choice if you want to get out of your confort zone and feel better.",
-    "picture": "/Resources/Sport/backgroundfitness.jpg",
-    "pictureWidth": "350px",
-    "pictureHeight": "350px"
+    "picture": "https://source.unsplash.com/1600x900/?whirlwind",
+    "color": "rgba(8, 9, 9, 0.138)"
   }
 ]

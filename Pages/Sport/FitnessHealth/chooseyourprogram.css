@@ -6,47 +6,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: inherit, sans-serif;
 }
 
 body {
   background: linear-gradient(to bottom, #000428, #f2f6fa);
   animation: background-color 10s;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 @keyframes background-color {
   0% {
-    background: linear-gradient(to bottom, #000428, #004683);
+    background: linear-gradient(to bottom, #000428, #8594a1);
   }
 
   25% {
-    background: linear-gradient(135deg, #a3c5ab, #67b067);
+    background: linear-gradient(135deg, #92a095, #000300);
   }
 
   50% {
-    background: linear-gradient(to bottom, #aa8198, #ffaef1);
+    background: linear-gradient(to bottom, #ffbde3, #130010);
   }
 
   100% {
-    background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+    background: linear-gradient(-135deg, #fae37d, #24002e, #002032);
   }
 }
 
 .bg-image-cyp {
-  background-image: url("/Resources/Sport/cyp.jpg");
+  background-image: url("https://source.unsplash.com/1600x900/?fitness");
   background-position: 100%;
   background-size: cover;
-  height: 95vh;
+  height: 70vh;
+  color: rgba(8, 9, 9, 0.238);
 }
-.container {
-  margin-top: 60px;
+.section1-title {
+  color: white;
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
 }
-.container .col-lg-4 {
+.section1-container .row-programs {
+  margin: 2rem;
+  gap: 1rem;
+  justify-content: space-evenly;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
-
 .card {
   width: 530px;
   height: 400px;
@@ -70,8 +75,6 @@ body {
   backface-visibility: hidden;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  /* border-right: 1px solid #999;
-border-bottom: 1px solid #999; */
 }
 
 .card .face.front-face,
@@ -132,29 +135,78 @@ border-bottom: 1px solid #999; */
 }
 
 @media (max-width: 991.5px) {
-  .col-lg-4 {
-    margin-top: 40px;
-    margin-bottom: 20px;
+  .bg-image-cyp {
+    width: 100%;
+    background-position: 100%;
+    background-size: cover;
+    height: 70vh;
+  }
+
+  .card {
+    margin: 0;
+    justify-content: center;
+    width: 330px;
+    height: 200px;
+  }
+  .card .face h2 {
+    font-size: 1.5rem;
+  }
+  .section1-title {
+    font-size: 2.3rem;
   }
 }
-
-.img-card {
-  height: 200px;
-  width: 200px;
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    justify-content: center;
+  }
+  .section1-title {
+    font-size: 1.6rem;
+  }
+  .section2-container .describe-programs .featurette {
+    width: 340px;
+    height: 400px;
+    margin: 1rem;
+  }
+  .featurette h1 {
+    font-size: 2rem;
+  }
+  .featurette h2 {
+    font-size: 0.5rem;
+  }
+}
+.section-2 {
+  margin-top: 2rem;
+}
+.section2-container .describe-programs {
+  margin: 2rem;
+  gap: 1rem;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.lead {
+.featurette h1 {
+  text-align: center;
+  padding: 2rem;
+  font-style: oblique;
+}
+.featurette h2 {
   font-size: 2rem;
+  text-align: center;
+  justify-content: space-around;
+  text-transform: none;
+  background-color: #00030063;
+  height: auto;
+  padding: 1rem 0 1rem 0;
 }
 
 .featurette {
   background: transparent;
   box-shadow: 0 15px 35px rgb(0 0 0 / 20%);
   height: 23rem;
-  width: 26rem;
+  width: 66rem;
   color: white;
-  border-radius: 2px;
-  /* background-image: url("/Resources/Sport/fire.jpg"); 
-   background-position: 100%;
-  background-size: cover; */
+  border-radius: 22px;
+  margin: 2rem;
 }

@@ -68,7 +68,7 @@ const loadDescriptions = function (array) {
     }
 
     let contentDescription = `
-    <div class="row featurette mt-5 pt-5" id="featurette">
+    <div class="row featurette reveal mt-5 pt-5" id="featurette">
         <div class="col-md-7 ${classText}">
             <h2 class="featurette-heading mb-5" id="${description.id}">
               ${description.titleSection}

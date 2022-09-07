@@ -108,8 +108,9 @@ const loadDelights = function (array) {
 
     // Construct card content
     const content = `
-      <div class="card-delights-container col-lg-4 col-md-6 col-sm-12">
-        <div class="card" >
+   
+      <div class="column card-delights-container col-lg-4 col-md-6 col-sm-12">
+        <div class="card " >
             <img class="card-img-top" src="${delight.photoUrl}" alt="${delight.title}" />
             <div class="card-body">
                 <h5 class="card-title">${delight.title} <img style="float:right;height:${delight.typeImgHeight};width:${delight.typeImgWidth}" src="${delight.typeImg}" /> </h5>
@@ -122,7 +123,7 @@ const loadDelights = function (array) {
                 </div>
           </div>
         </div>
-      </div>
+  
     `;
 
     // Append newyly created card element to the container

@@ -115,7 +115,7 @@ const loadDelights = function (array) {
             <div class="card-body">
                 <h5 class="card-title">${delight.title} <img style="float:right;height:${delight.typeImgHeight};width:${delight.typeImgWidth}" src="${delight.typeImg}" /> </h5>
              
-                <h5 class="showprice-btn">${delight.price}</h5>
+                <h3 class="showprice-btn">${delight.price}</h3>
                 <div class="btns-cards">
                 <a  onclick="updateDelight(${delight.id}, '${btnSaveDel}')" class="btn btn-light btn-del">${btnSaveDel}</a>
                 <a class="btn btn-light btn-del ">To cart</a>

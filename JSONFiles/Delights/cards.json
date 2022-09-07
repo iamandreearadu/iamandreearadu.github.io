@@ -1,5 +1,50 @@
 [
   {
+    "id": 18,
+    "photoUrl": "/Resources/DelightsNest/5snickerscake.jpg",
+    "title": "Snickers Cake",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "15,00 LEI / BUC"
+  },
+  {
+    "id": 17,
+    "photoUrl": "/Resources/DelightsNest/4chocolatecaramelcake.jpg",
+    "title": "Chocolate and Caramel Cake",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "15,00 LEI / BUC"
+  },
+  {
+    "id": 16,
+    "photoUrl": "/Resources/DelightsNest/3biscoffcheesecake.jpeg",
+    "title": "No-Bake Biscoff Cheesecake",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "17,00 LEI / BUC"
+  },
+  {
+    "id": 15,
+    "photoUrl": "/Resources/DelightsNest/2saltedchoux.jpg",
+    "title": "Choux with cheese",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "11,00 LEI / 100g"
+  },
+  {
+    "id": 14,
+    "photoUrl": "/Resources/DelightsNest/1whitechocomouse.jpg",
+    "title": "White Chocolate Mouse & Raspberry Jelly ",
+    "typeImg": "/Resources/DelightsNest/100natural.jpg",
+    "typeImgHeight": "50px",
+    "typeImgWidth": "50px",
+    "price": "16,00 LEI / BUC"
+  },
+  {
     "id": 13,
     "photoUrl": "/Resources/DelightsNest/raspberryjam_slice.jpg",
     "title": "Raspberry Jam Slice",

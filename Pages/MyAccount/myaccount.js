@@ -36,4 +36,75 @@
 
     Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
 */
+var arrayDetails = [];
+const detailsContainer = document.getElementById("details-container");
 
+const loadDetails = function (array) {
+  detailsContainer.innerHTML = "";
+
+  array.forEach((detail, idx) => {
+    const card = document.createElement("div");
+    card.classList = "card-body";
+
+    let content = `<div class="card-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-0">Full Name</p>
+      </div>
+      <div class="col-sm-9">
+        <p class="text-muted mb-0">${detail.fullName}</p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-0">Email</p>
+      </div>
+      <div class="col-sm-9">
+        <p class="text-muted mb-0">
+        ${detail.email}
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-0">Phone</p>
+      </div>
+      <div class="col-sm-9">
+        <p class="text-muted mb-0">${detail.phone}</p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-0">Date of birth</p>
+      </div>
+      <div class="col-sm-9">
+        <p class="text-muted mb-0">${detail.dateOfBirth}</p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="mb-0">Address</p>
+      </div>
+      <div class="col-sm-9">
+        <p class="text-muted mb-0">${detail.adress}</p>
+      </div>
+    </div>
+  </div>`;
+    detailsContainer.innerHTML += content;
+  });
+};
+
+function getDetailsProfile() {
+  $.getJSON("/JSONFiles/Auth/users.json", (details) => {
+    details.forEach((detail, i) => {
+      arrayDetails.push(detail);
+    });
+  });
+}
+
+getDetailsProfile();
+loadDetails(arrayDetails);

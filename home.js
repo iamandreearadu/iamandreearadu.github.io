@@ -17,10 +17,7 @@ const loadInterests = function (array) {
     } else if (idx === 2) {
       btnScrollDown = "btn-scrolldown--3";
     }
-    /*  <img
-        class="img-interest "
-        src="${interests.picture}"
-        />*/
+
     let contentInterest = `
       <div class="interest-area" style=" background-image: url('${interests.picture}');">
        

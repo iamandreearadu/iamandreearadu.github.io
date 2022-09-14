@@ -44,5 +44,20 @@
     "id": 9,
     "image": "/Resources/DelightsNest/biscuits.jpg",
     "link": "https://www.instagram.com/p/Cc5ESeaMKH4/?hl=ro"
+  },
+  {
+    "id": 10,
+    "image": "/Resources/DelightsNest/3biscoffcheesecake.jpeg",
+    "link": "https://www.instagram.com/p/CiKPE99s7dk/?hl=ro"
+  },
+  {
+    "id": 11,
+    "image": "/Resources/DelightsNest/5snickerscake.jpg",
+    "link": "https://www.instagram.com/p/CicDZOBs6wk/?hl=ro"
+  },
+  {
+    "id": 12,
+    "image": "/Resources/DelightsNest/2saltedchoux.jpg",
+    "link": "https://www.instagram.com/p/Ch4Hf9-MtDX/?hl=ro"
   }
 ]

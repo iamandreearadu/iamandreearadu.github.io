@@ -2,11 +2,19 @@
   {
     "id": 1,
     "email": "alexandru.boldisor@boldinet.ro",
-    "password": "password"
+    "password": "password",
+    "fullName": "Alexandru Boldisor",
+    "phone": "0723 543 653",
+    "dateOfBirth": "22.04.1995",
+    "adress": "Sibiu,Romania"
   },
   {
     "id": 2,
     "email": "test@test.ro",
-    "password": "test"
+    "password": "test",
+    "fullName": "Test Test",
+    "phone": "0723 543 xyz",
+    "dateOfBirth": "xy.xy.xyzz",
+    "adress": "Sibiu,Romania"
   }
 ]

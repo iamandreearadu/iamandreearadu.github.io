@@ -364,3 +364,7 @@ body {
   font-size: 1.6rem;
   transition: 0.1s ease-in-out;
 }
+.img-post-instagram {
+  width: 130px;
+  height: 130px;
+}

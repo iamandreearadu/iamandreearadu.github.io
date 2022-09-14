@@ -13,8 +13,8 @@ function submitLogin() {
 
   if (isUserLoggedIn()) {
     alert("Deja este logat");
-    // SA pui aici URL-ul tau principal
-    window.location.replace("http://127.0.0.1:5501");
+
+    window.location.replace("/index.html");
     return;
   }
 
@@ -23,7 +23,7 @@ function submitLogin() {
   } else {
     let isValidated = false;
 
-    $.getJSON("//127.0.0.1:5501/JSONFiles/Auth/users.json", (users) => {
+    $.getJSON("/JSONFiles/Auth/users.json", (users) => {
       users.forEach((user) => {
         if (user.email === email && user.password === password) {
           isValidated = true;
@@ -36,8 +36,8 @@ function submitLogin() {
       credentials.password = password;
       var cred = JSON.stringify(credentials);
       window.localStorage.setItem("Credentials", cred);
-      // SA pui aici URL-ul tau principal
-      window.location.replace("http://127.0.0.1:5501/");
+
+      window.location.replace("/index.html");
     } else {
       alert("Datele introduse sunt incorecte! Verifica fisierul users.json");
     }
@@ -50,8 +50,8 @@ function registerBtn() {
 
   if (isUserLoggedIn()) {
     alert("Deja este logat");
-    // SA pui aici URL-ul tau principal
-    window.location.replace("http://127.0.0.1:5501");
+
+    window.location.replace("/index.html");
     return;
   }
 
@@ -60,7 +60,7 @@ function registerBtn() {
   } else {
     let isUsed = false;
 
-    $.getJSON("//127.0.0.1:5501/JSONFiles/Auth/users.json", (users) => {
+    $.getJSON("/JSONFiles/Auth/users.json", (users) => {
       users.forEach((user) => {
         if (user.email === email) {
           isUsed = true;
@@ -76,8 +76,8 @@ function registerBtn() {
 
       var cred = JSON.stringify(credentials);
       window.localStorage.setItem("Credentials", cred);
-      // SA pui aici URL-ul tau principal
-      window.location.replace("http://127.0.0.1:5501/");
+
+      window.location.replace("/index.html");
     }
   }
 }

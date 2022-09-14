@@ -37,9 +37,6 @@ const displayUserMenu = function (isView) {
     loginBtn.classList.remove("d-none");
     registerBtn.classList.remove("d-none");
   }
-
-  //   let myObj = JSON.parse("JSONFiles/Index/carousel.json");
-  //   console.log(myObj);
 };
 
 /*
@@ -61,25 +58,6 @@ const displayUserMenu = function (isView) {
 
     Author: Boldisoru' - Software Engineer | Life Coach | Gym Coach | Healer etc... :))
 */
-
-//TRYING HOVER OVER THE NAVBAR
-// const nav = document.querySelector(".navbar-nav");
-// const handleHoverMenuTabs = function (e, opacity) {
-//   if (e.target.classList.contains(".nav-link")) {
-//     const link = e.target;
-//     const siblings = link.closest(".navbar-nav").querySelector(".nav-link");
-
-//     siblings.forEach((el) => {
-//       if (el !== link) el.style.opacity = opacity;
-//     });
-//   }
-// };
-// nav.addEventListener("mouseover", function (e) {
-//   handleHoverMenuTabs(e, 0.5);
-// });
-// nav.addEventListener("mouseout", function (e) {
-//   handleHoverMenuTabs(e, 1);
-// });
 
 /* TOGGLE FUNCTION */
 const navToggle = document.querySelector(".nav-toggle");

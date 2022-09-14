@@ -136,8 +136,7 @@ const loadInstagramPosts = function (array) {
     let postHealth = document.createElement("li");
     postHealth.classList = "instagram-post-health";
 
-    let contentInstagramPost = `<li class="instagram-post-health" href="${post.link}" style="background-image:url(${post.image});" >
-  </li> `;
+    let contentInstagramPost = `<li class="instagram-post-health" ><a href="${post.link}"><img class="img-post-instagram" src="${post.image}"/></a></li> `;
     instagramContainer.innerHTML += contentInstagramPost;
   });
 };
